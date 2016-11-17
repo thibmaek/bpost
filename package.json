@@ -1,0 +1,70 @@
+{
+  "name": "bpost",
+  "version": "0.1.0",
+  "description": "JavaScript API wrapper for bpost track &amp; trace",
+  "main": "cjs/index.js",
+  "browser": "dist/bpost.js",
+  "module": "es/index.js",
+  "jsxnext:main": "es/index.js",
+  "watch": {
+    "prepublish": {
+      "patterns": [
+        "src",
+        "__tests__"
+      ],
+      "extensions": "js",
+      "quiet": true
+    }
+  },
+  "files": [
+    "dist",
+    "cjs",
+    "es",
+    "src"
+  ],
+  "pre-commit": [
+    "prepublish"
+  ],
+  "pre-push": [
+    "prepublish"
+  ],
+  "scripts": {
+    "lint": "eslint src/*.js",
+    "test": "jest --coverage",
+    "prepublish": "npm run lint && npm run build:cjs && npm run test",
+    "development": "npm-watch",
+    "build": "npm run prepublish && npm run build:es && npm run build:umd",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:cjs": "rimraf cjs && cross-env BABEL_ENV=cjs babel src --out-dir cjs",
+    "build:umd": "rimraf dist && cross-env BABEL_ENV=es rollup -c & cross-env BABEL_ENV=es NODE_ENV=production rollup -c"
+  },
+  "keywords": [],
+  "author": "Thibault Maekelbergh (thibault.maekelbergh@icloud.com)",
+  "license": "MIT",
+  "repository": "thibmaek/bpost",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.17.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.16.0",
+    "cross-env": "^3.1.3",
+    "eslint": "^3.7.1",
+    "eslint-config-devine": "^1.5.0",
+    "eslint-plugin-babel": "^3.3.0",
+    "jest": "^16.0.1",
+    "npm-watch": "^0.1.6",
+    "pre-commit": "^1.1.3",
+    "pre-push": "^0.1.1",
+    "rimraf": "^2.5.4",
+    "rollup": "^0.36.1",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-bundle-size": "^1.0.1",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1"
+  },
+  "dependencies": {
+    "axios": "^0.15.2",
+    "lodash": "^4.17.2"
+  }
+}
