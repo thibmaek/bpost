@@ -1,4 +1,5 @@
 es
 cjs
 node_modules
+coverage
 .DS_Store

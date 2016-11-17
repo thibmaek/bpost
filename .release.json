@@ -1,0 +1,6 @@
+{
+  "commitMessage": ":rocket: v%s",
+  "tagName": "v%s",
+  "prereleaseId": "beta",
+  "tagAnnotation": "Version %s"
+}
