@@ -2,7 +2,7 @@ import { find } from 'lodash';
 import composedFetch from '../composedFetch';
 
 export const droppedOffBySender = id => composedFetch(id)
-  .then(data => console.log(find(data.events, { key: `received.domestic-corner` })))
+  .then(data => find(data.events, { key: `received.domestic-corner` }))
   .catch(e => console.log(e));
 
 export const availableForPickup = id => {

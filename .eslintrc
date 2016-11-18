@@ -2,6 +2,7 @@
   "extends": "devine",
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
+    "max-len": ["warn", 100],
     "babel/object-curly-spacing": ["error", "always"],
   }
 }
