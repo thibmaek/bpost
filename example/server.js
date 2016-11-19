@@ -1,10 +1,10 @@
-import {
+const {
   getStatus,
   openingHours,
   availableForPickup,
   getPackageWeight,
   destinationAsAddress,
-} from 'bpost';
+} = require(`bpost`);
 
 const currStatus = getStatus(`323267009691651472`);
 console.log(currStatus); // 📋 {"name":"processing", "status":"active", …}
