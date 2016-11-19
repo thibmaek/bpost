@@ -40,7 +40,7 @@ export const openingHours = (id, day) => {
     .catch(e => console.error(e));
 };
 
-export const coordinate = id => composedFetch(id)
+export const destinationCoordinate = id => composedFetch(id)
   .then(data => {
     return {
       latitude: data.deliveryPoint.latitude,
