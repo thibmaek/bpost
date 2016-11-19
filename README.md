@@ -31,6 +31,8 @@ This module was created using [generator-module-boilerplate](https://github.com/
 ### setup
 
 ```js
+// Destructured imports also supported
+
 // es native
 import bpost from 'bpost';
 
@@ -39,6 +41,43 @@ const bpost = require('bpost');
 ```
 
 ### methods
+__bpost#getStatus(id)__
+> object: Returns the currently active step
+
+__bpost#droppedOffBySender(id)__
+> object: Returns information when package has been received at source postal point
+
+__bpost#availableForPickup(id)__
+> boolean: Returns true when package is available for pickup
+
+__bpost#getPackageWeight(id)__
+> number: Returns the package weight in grams 
+
+__bpost#deliveryMethod(id)__
+> string: Returns the requested delivery method
+
+__bpost#identifier(id)__
+> number: Returns the internal id for package
+_❗ this is different from the itemIdentifier param passed to the methods as first argument_
+
+__bpost#sourcePostalPoint(id)__
+> string: Returns the English name for the postal point where your package is delivered by the sender
+
+__bpost#destinationPostalPoint(id)__
+> string: Returns the English name for the postal point where your package is delivered for the recipient
+
+__bpost#destinationAsAddress(id)__
+> string: Returns a formatted string with the complete destination address
+(eg. `"Pathoekeweg 73, 8000 Brugge"`)
+
+__bpost#openingHours(id, day)__
+> object: Returns opening and closing times on the given day
+(eg. `{ open: "07:00", close: "19:00" }`)
+
+__bpost#destinationCoordinate(id)__
+> object: Returns a 2D lat long coordinate of the destination
+(eg. `{ "longitude": 3.21387, "latitude": 51.23154, }`)
+
 
 ### Examples
 
