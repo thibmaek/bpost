@@ -1,5 +1,12 @@
+# build output
 es
 cjs
+dist
+
+# dependencies & tests
 node_modules
 coverage
+
+# logs, OS files
 .DS_Store
+*.log

@@ -6,7 +6,7 @@ import {
   destinationPostalPoint,
   destinationAsAddress,
   openingHours,
-  coordinate,
+  destinationCoordinate,
 } from './lib/methods/postalPoint';
 
 export default {
@@ -23,5 +23,5 @@ export default {
   destinationPostalPoint,
   destinationAsAddress,
   openingHours,
-  coordinate,
+  destinationCoordinate,
 };
