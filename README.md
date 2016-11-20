@@ -24,15 +24,13 @@ If you don't use a package manager, you can [access `bpost` via unpkg (CDN)](htt
 
 The `bpost` package includes precompiled production and development [UMD](https://github.com/umdjs/umd) builds in the [`dist` folder](https://unpkg.com/bpost/dist/). They can be used directly without a bundler and are thus compatible with many popular JavaScript module loaders and environments. You can drop a UMD build as a [`<script>` tag](https://unpkg.com/bpost) on your page. The UMD builds make `bpost` available as a `window.bpost` global variable.
 
-This module was created using [generator-module-boilerplate](https://github.com/duivvv/generator-module-boilerplate).
+This module was created using the magnificent [generator-module-boilerplate](https://github.com/duivvv/generator-module-boilerplate).
 
 ### Usage
 
 ### setup
 
 ```js
-// Destructured imports also supported
-
 // es native
 import bpost from 'bpost';
 
@@ -41,47 +39,48 @@ const bpost = require('bpost');
 ```
 
 ### methods
-__bpost#getStatus(id)__
-> object: Returns the currently active step
+__bpost#getStatus(id: String)__
+> Object: returns the currently active step
 
-__bpost#droppedOffBySender(id)__
-> object: Returns information when package has been received at source postal point
+__bpost#droppedOffBySender(id: String)__
+> Object: returns information when package has been received at source postal point
 
-__bpost#availableForPickup(id)__
-> boolean: Returns true when package is available for pickup
+__bpost#availableForPickup(id: String)__
+> Boolean: returns true when package is available for pickup
 
-__bpost#getPackageWeight(id)__
-> number: Returns the package weight in grams 
+__bpost#getPackageWeight(id: String)__
+> Number: returns the package weight in grams
 
-__bpost#deliveryMethod(id)__
-> string: Returns the requested delivery method
+__bpost#deliveryMethod(id: String)__
+> String: returns the requested delivery method
+(e.g `"POSTAL_POINT"`)
 
-__bpost#identifier(id)__
-> number: Returns the internal id for package
+__bpost#identifier(id: String)__
+> Number: returns the internal id for package
 _❗ this is different from the itemIdentifier param passed to the methods as first argument_
 
-__bpost#sourcePostalPoint(id)__
-> string: Returns the English name for the postal point where your package is delivered by the sender
+__bpost#sourcePostalPoint(id: String)__
+> String: returns the English name for the postal point where your package is delivered by the sender
 
-__bpost#destinationPostalPoint(id)__
-> string: Returns the English name for the postal point where your package is delivered for the recipient
+__bpost#destinationPostalPoint(id: String)__
+> String: returns the English name for the postal point where your package is delivered for the recipient
 
-__bpost#destinationAsAddress(id)__
-> string: Returns a formatted string with the complete destination address
+__bpost#destinationAsAddress(id: String)__
+> String: returns a formatted string with the complete destination address
 (eg. `"Pathoekeweg 73, 8000 Brugge"`)
 
-__bpost#openingHours(id, day)__
-> object: Returns opening and closing times on the given day
+__bpost#openingHours(id: String, day: String)__
+> Object: returns opening and closing times on the given day
 (eg. `{ open: "07:00", close: "19:00" }`)
 
-__bpost#destinationCoordinate(id)__
-> object: Returns a 2D lat long coordinate of the destination
+__bpost#destinationCoordinate(id: String)__
+> Object: returns a 2D lat long coordinate of the destination
 (eg. `{ "longitude": 3.21387, "latitude": 51.23154, }`)
 
 
 ### Examples
 
-see [`example`](example/script.js) folder or the [runkit](https://runkit.com//gen) example
+see the [`examples`](example/) folder or the [runkit](https://runkit.com/thibmaek/bpost) example
 
 ### License
 
