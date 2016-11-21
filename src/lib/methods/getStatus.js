@@ -1,4 +1,4 @@
-import { find } from 'lodash';
+import find from 'lodash.find';
 import composedFetch from '../composedFetch';
 
 export default id => composedFetch(id)

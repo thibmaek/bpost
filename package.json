@@ -68,6 +68,6 @@
   },
   "dependencies": {
     "axios": "^0.15.2",
-    "lodash": "^4.17.2"
+    "lodash.find": "^4.6.0"
   }
 }
