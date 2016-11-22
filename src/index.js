@@ -1,13 +1,13 @@
-import getStatus from './lib/methods/getStatus';
-import { droppedOffBySender, availableForPickup } from './lib/methods/events';
-import { getPackageWeight, identifier, deliveryMethod } from './lib/methods/packageInfo';
+import getStatus from 'src/lib/methods/getStatus';
+import { droppedOffBySender, availableForPickup } from 'src/lib/methods/events';
+import { getPackageWeight, identifier, deliveryMethod } from 'src/lib/methods/packageInfo';
 import {
   sourcePostalPoint,
   destinationPostalPoint,
   destinationAsAddress,
   openingHours,
   destinationCoordinate,
-} from './lib/methods/postalPoint';
+} from 'src/lib/methods/postalPoint';
 
 export default {
   getStatus,

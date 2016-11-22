@@ -1,3 +1,4 @@
+import rootImport from 'rollup-plugin-root-import';
 import babel from 'rollup-plugin-babel';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import uglify from 'rollup-plugin-uglify';
@@ -7,6 +8,11 @@ import commonjs from 'rollup-plugin-commonjs';
 const name = `bpost`;
 
 const plugins = [
+  rootImport({
+    root: [`${__dirname}/`],
+    useEntry: `append`,
+    extension: `.js`,
+  }),
   babel(),
   nodeResolve({
     module: true,
