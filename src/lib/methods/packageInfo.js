@@ -1,4 +1,4 @@
-import composedFetch from 'src/lib/composedFetch';
+import composedFetch from '/src/lib/composedFetch.js';
 
 export const getPackageWeight = id => {
   composedFetch(id)

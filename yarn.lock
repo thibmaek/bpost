@@ -3232,9 +3232,9 @@ rollup-plugin-node-resolve@^2.0.0:
     builtin-modules "^1.1.0"
     resolve "^1.1.6"
 
-rollup-plugin-root-import@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-root-import/-/rollup-plugin-root-import-0.2.1.tgz#a69d4d2ef94fc8bc00f9f8a11159f902ddba1944"
+rollup-plugin-resolve-root@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-resolve-root/-/rollup-plugin-resolve-root-0.1.0.tgz#741850bffd8808a7e9d8a58440692fc1c3108fe4"
 
 rollup-plugin-uglify@^1.0.1:
   version "1.0.1"

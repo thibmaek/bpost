@@ -1,5 +1,5 @@
-import * as bpost from 'src/lib/methods/getStatus';
-jest.mock(`__mocks__/composedFetch`);
+import * as bpost from '/src/lib/methods/getStatus.js';
+jest.mock(`/__mocks__/composedFetch`);
 
 const result = {
   name: `delivered`,
