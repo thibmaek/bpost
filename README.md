@@ -7,7 +7,7 @@ JavaScript API wrapper for bpost track &amp; trace
 [![Travis](https://img.shields.io/travis/thibmaek/bpost/master.svg?style=flat-square)](https://travis-ci.org/thibmaek/bpost)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
 
-### Installation
+## Installation
 
 Install via [yarn](https://github.com/yarnpkg/yarn)
 
@@ -26,7 +26,7 @@ The `bpost` package includes precompiled production and development [UMD](https:
 
 This module was created using the magnificent [generator-module-boilerplate](https://github.com/duivvv/generator-module-boilerplate).
 
-### Usage
+## Usage
 
 ### setup
 
@@ -78,10 +78,13 @@ __bpost#destinationCoordinate(id: String)__
 (eg. `{ "longitude": 3.21387, "latitude": 51.23154, }`)
 
 
-### Examples
+## Examples
 
 see the [`examples`](example/) folder or the [runkit](https://runkit.com/thibmaek/bpost) example
 
+### Contributing
+We are open to contributions, see [CONTRIBUTING.md](CONTRIBUTING.md) for more info.
+
 ### License
 
-[MIT](LICENSE)
+The code is available under the [MIT](LICENSE) license.
