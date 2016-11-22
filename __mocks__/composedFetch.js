@@ -1,18 +1,10 @@
-const statusResult = {
-  name: `delivered`,
-  status: `active`,
-  label: {
-    main: `pickedUp`,
-    detail: `inPostPoint`,
-  },
-  knownProcessStep: `PICKED_UP_IN_POST_POINT_INTERNATIONAL`,
-};
+import * as res from 'src/__mocks__/response.json';
 
 const composedFetch = id => {
   return new Promise((resolve, reject) => {
     process.nextTick(() =>
-      statusResult[status] === `active`
-        ? resolve(statusResult)
+      res[status] === `active`
+        ? resolve(res)
         : reject({
           error: `no active step found for ${id}`,
         })
