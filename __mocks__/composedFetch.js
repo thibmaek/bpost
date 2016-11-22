@@ -1,4 +1,4 @@
-import * as res from 'src/__mocks__/response.json';
+import * as res from '__mocks__/res_pp.json';
 
 const composedFetch = id => {
   return new Promise((resolve, reject) => {
