@@ -1,5 +1,5 @@
 import find from 'lodash.find';
-import composedFetch from '/src/lib/composedFetch.js';
+import composedFetch from '../composedFetch.js';
 
 export const sourcePostalPoint = id => {
   composedFetch(id)
