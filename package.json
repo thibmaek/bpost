@@ -28,6 +28,9 @@
       "pre-push": "npm run lint:build:test"
     }
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "scripts": {
     "lint": "eslint src/*.js",
     "test": "jest --coverage",

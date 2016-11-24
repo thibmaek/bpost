@@ -1,12 +1,12 @@
-import * as res from './res_pp.json';
+import * as res from './res_postal_point.json';
 
 const composedFetch = id => {
   return new Promise((resolve, reject) => {
     process.nextTick(() =>
-      res[status] === `active`
+      id === `323267009691651472`
         ? resolve(res)
         : reject({
-          error: `no active step found for ${id}`,
+          error: `Incorrect id with of value ${id} passed`,
         })
     );
   });
