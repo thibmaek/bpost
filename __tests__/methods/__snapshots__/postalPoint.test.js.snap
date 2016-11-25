@@ -1,0 +1,6 @@
+exports[`Method: destinationCoordinate should return destination as 2D coordinate 1`] = `
+Object {
+  "latitude": 51.23154,
+  "longitude": 3.21387,
+}
+`;

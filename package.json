@@ -29,11 +29,19 @@
     }
   },
   "jest": {
-    "testEnvironment": "node"
+    "globals": {
+      "ID": "323267009691651472",
+      "ID_FALSE": "3D3267OO9691651472"
+    },
+    "notify": true,
+    "setupTestFrameworkScriptFile": "__tests__/jestSetup.js",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": ["jestSetup.js"]
   },
   "scripts": {
     "lint": "eslint src/*.js",
     "test": "jest --coverage",
+    "test:update": "npm test -- -u",
     "lint:build:test": "npm run lint && npm run build:cjs && npm run test",
     "prepublish": "npm run build",
     "development": "npm-watch",
