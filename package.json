@@ -81,5 +81,8 @@
   "dependencies": {
     "axios": "^0.15.2",
     "lodash.find": "^4.6.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   }
 }
