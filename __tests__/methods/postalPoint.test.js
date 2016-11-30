@@ -1,8 +1,8 @@
-import * as bpost from '../../src/lib/methods/postalPoint';
+import * as bpost from '../../src/lib/methods/postalPointOptions';
 
 describe(`Method: sourcePostalPoint`, () => {
   it(`should return the source postal point name`, async done => {
-    const request = await bpost.sourcePostalPoint(global.BPOST_ID);
+    const request = await bpost.sourcePostalPoint(global.BPOST_ID_POSTAL);
     expect(request).toEqual(`PP PRESS SHOP WAASLAND`);
     done();
   });
@@ -10,7 +10,7 @@ describe(`Method: sourcePostalPoint`, () => {
 
 describe(`Method: destinationPostalPoint`, () => {
   it(`should return the destination postal point name`, async done => {
-    const request = await bpost.destinationPostalPoint(global.BPOST_ID);
+    const request = await bpost.destinationPostalPoint(global.BPOST_ID_POSTAL);
     expect(request).toEqual(`POSTPUNT OCTA+ BRUGGE`);
     done();
   });
@@ -18,7 +18,7 @@ describe(`Method: destinationPostalPoint`, () => {
 
 describe(`Method: destinationAsAddress`, () => {
   it(`should return the destination postal point formatted as an address`, async done => {
-    const request = await bpost.destinationAsAddress(global.BPOST_ID);
+    const request = await bpost.destinationAsAddress(global.BPOST_ID_POSTAL);
     expect(request).toEqual(`Pathoekeweg 74, 8000 Brugge`);
     done();
   });
@@ -27,7 +27,7 @@ describe(`Method: destinationAsAddress`, () => {
 describe(`Method: openingHours`, () => {
   it(`should fail if no day is passed`, async done => {
     try {
-      await bpost.openingHours(global.BPOST_ID);
+      await bpost.openingHours(global.BPOST_ID_POSTAL);
     } catch (e) {
       expect(e).toThrowError();
     }
@@ -35,7 +35,7 @@ describe(`Method: openingHours`, () => {
   });
 
   it(`should return the opening hours`, async done => {
-    const request = await bpost.openingHours(global.BPOST_ID, `monday`);
+    const request = await bpost.openingHours(global.BPOST_ID_POSTAL, `monday`);
     expect(request).toMatchSnapshot();
     done();
   });
@@ -43,7 +43,7 @@ describe(`Method: openingHours`, () => {
 
 describe(`Method: destinationCoordinate`, () => {
   it(`should return destination as 2D coordinate`, async done => {
-    const request = await bpost.destinationCoordinate(global.BPOST_ID);
+    const request = await bpost.destinationCoordinate(global.BPOST_ID_POSTAL);
     expect(request).toMatchSnapshot();
     done();
   });
