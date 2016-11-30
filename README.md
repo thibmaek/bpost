@@ -40,15 +40,35 @@ const bpost = require('bpost');
 ```
 
 ### methods
-__bpost#getStatus(id: String)__
-> Object: returns the currently active step
-
+#### events.js
 __bpost#droppedOffBySender(id: String)__
 > Object: returns information when package has been received at source postal point
 
 __bpost#availableForPickup(id: String)__
 > Boolean: returns true when package is available for pickup
 
+#### getStatus.js
+__bpost#getStatus(id: String)__
+> Object: returns the currently active step
+
+#### homeDeliveryOptions.js
+__bpost#availableFrom(id: String)__
+> Object: returns the earliest time and day that a package can be picked up after absence
+
+__bpost#availableTo(id: String)__
+> Object: returns the latest time and day that a package can be picked up after absence
+
+__bpost#availableFromTo(id: String)__
+> String: returns a formatted string stating the period (in days) a package can be picked up after absence
+(e.g `"Available from 2016-11-23 to 2016-12-07"`)
+
+__bpost#attemptedDelivery(id: String)__
+> Object: returns the time and day that delivery was attempted but receiver was absent
+
+__bpost#actualDelivery(id: String)__
+> Object: returns the time and day when a package was picked up from the postal point, receiving the absently delivered package
+
+#### packageInfo.js
 __bpost#getPackageWeight(id: String)__
 > Number: returns the package weight in grams
 
@@ -60,6 +80,15 @@ __bpost#identifier(id: String)__
 > Number: returns the internal id for package
 _❗ this is different from the itemIdentifier param passed to the methods as first argument_
 
+__bpost#hasRetourOptions(id: String)__
+> Boolean: returns true when package is eligible for retour
+
+__bpost#receiver(id: String, formatted: Boolean)__
+> Object: returns data for the receiver
+> String: returns a formatted string with receiver data
+(eg. `"THIBAULT MAEKELBERGH, 8000 BRUGGE, BE"`)
+
+#### postalPointOptions.js
 __bpost#sourcePostalPoint(id: String)__
 > String: returns the English name for the postal point where your package is delivered by the sender
 

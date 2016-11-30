@@ -1,13 +1,26 @@
 import getStatus from './lib/methods/getStatus.js';
 import { droppedOffBySender, availableForPickup } from './lib/methods/events.js';
-import { getPackageWeight, identifier, deliveryMethod } from './lib/methods/packageInfo.js';
+import {
+  getPackageWeight,
+  identifier,
+  deliveryMethod,
+  hasRetourOptions,
+  receiver,
+} from './lib/methods/packageInfo.js';
 import {
   sourcePostalPoint,
   destinationPostalPoint,
   destinationAsAddress,
   openingHours,
   destinationCoordinate,
-} from './lib/methods/postalPoint.js';
+} from './lib/methods/postalPointOptions.js';
+import {
+  availableFrom,
+  availableTo,
+  availableFromTo,
+  attemptedDelivery,
+  actualDelivery,
+} from './lib/methods/homeDeliveryOptions.js';
 
 export default {
   getStatus,
@@ -18,10 +31,18 @@ export default {
   getPackageWeight,
   deliveryMethod,
   identifier,
+  hasRetourOptions,
+  receiver,
 
   sourcePostalPoint,
   destinationPostalPoint,
   destinationAsAddress,
   openingHours,
   destinationCoordinate,
+
+  availableFrom,
+  availableTo,
+  availableFromTo,
+  attemptedDelivery,
+  actualDelivery,
 };

@@ -11,3 +11,18 @@ export const identifier = id => composedFetch(id)
 export const deliveryMethod = id => composedFetch(id)
   .then(data => data.requestedDeliveryMethod.toLowerCase().split(`_`))
   .catch(e => console.error(e));
+
+export const hasRetourOptions = id => composedFetch(id)
+  .then(data => data.retourOrBackToSender ? true : false)
+  .catch(e => console.error(e));
+
+export const receiver = (id, formatted = false) => composedFetch(id)
+  .then(data => {
+    if (formatted) {
+      const { name, postcode, municipality, countryCode } = data.receiver;
+      return `${name}, ${postcode} ${municipality}, ${countryCode}`;
+    } else {
+      return data.receiver;
+    }
+  })
+  .catch(e => console.error(e));
