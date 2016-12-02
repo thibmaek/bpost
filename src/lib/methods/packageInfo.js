@@ -1,23 +1,26 @@
 import composedFetch from '../composedFetch.js';
 
-export const getPackageWeight = id => composedFetch(id)
-  .then(data => data.weightInGrams)
-  .catch(e => console.error(e));
+import { receiverType } from '../types.js';
 
-export const identifier = id => composedFetch(id)
-  .then(data => data.key.id)
-  .catch(e => console.error(e));
+export const getPackageWeight = (id: string): Promise<number> => composedFetch(id)
+  .then((data: Object) => data.weightInGrams)
+  .catch((e: Object) => console.error(e));
 
-export const deliveryMethod = id => composedFetch(id)
-  .then(data => data.requestedDeliveryMethod.toLowerCase().split(`_`))
-  .catch(e => console.error(e));
+export const identifier = (id: string): Promise<number> => composedFetch(id)
+  .then((data: Object) => data.key.id)
+  .catch((e: Object) => console.error(e));
 
-export const hasRetourOptions = id => composedFetch(id)
-  .then(data => data.retourOrBackToSender ? true : false)
-  .catch(e => console.error(e));
+export const deliveryMethod = (id: string): Promise<string[]> => composedFetch(id)
+  .then((data: Object) => data.requestedDeliveryMethod.toLowerCase().split(`_`))
+  .catch((e: Object) => console.error(e));
 
-export const receiver = (id, formatted = false) => composedFetch(id)
-  .then(data => {
+export const hasRetourOptions = (id: string): Promise<boolean> => composedFetch(id)
+  .then((data: Object) => data.retourOrBackToSender ? true : false)
+  .catch((e: Object) => console.error(e));
+
+export const receiver = (id: string, formatted: boolean = false): Promise<receiverType> =>
+  composedFetch(id)
+  .then((data: Object) => {
     if (formatted) {
       const { name, postcode, municipality, countryCode } = data.receiver;
       return `${name}, ${postcode} ${municipality}, ${countryCode}`;
@@ -25,4 +28,4 @@ export const receiver = (id, formatted = false) => composedFetch(id)
       return data.receiver;
     }
   })
-  .catch(e => console.error(e));
+  .catch((e: Object) => console.error(e));

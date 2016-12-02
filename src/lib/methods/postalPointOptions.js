@@ -1,44 +1,46 @@
 import find from 'lodash.find';
 import composedFetch from '../composedFetch.js';
 
-export const sourcePostalPoint = id => composedFetch(id)
-  .then(data => {
-    const result = find(data.events, { key: `received.domestic-corner` });
+import { coordinateType } from '../types.js';
+
+export const sourcePostalPoint = (id: string): Promise<string> => composedFetch(id)
+  .then((data: Object) => {
+    const result: Object = find(data.events, { key: `received.domestic-corner` });
     return result.location.en;
   })
-  .catch(e => console.error(e));
+  .catch((e: Object) => console.error(e));
 
-export const destinationPostalPoint = id => composedFetch(id)
-  .then(data => data.deliveryPoint.name.en)
-  .catch(e => console.error(e));
+export const destinationPostalPoint = (id: string): Promise<string> => composedFetch(id)
+  .then((data: Object) => data.deliveryPoint.name.en)
+  .catch((e: Object) => console.error(e));
 
-export const destinationAsAddress = id => composedFetch(id)
-  .then(data => {
+export const destinationAsAddress = (id: string): Promise<string> => composedFetch(id)
+  .then((data: Object) => {
     const obj = data.deliveryPoint;
     return `${obj.street.en} ${obj.streetNumber.en}, ${obj.postcode.en} ${obj.municipality.en}`;
   })
-  .catch(e => console.error(e));
+  .catch((e: Object) => console.error(e));
 
-export const openingHours = (id, day) => {
+export const openingHours = (id: string, day: string): Promise<Object> => {
   if (!day) throw new Error(`Please specify a day`);
 
   return composedFetch(id)
-    .then(data => {
-      const obj = find(
+    .then((data: Object) => {
+      const obj: Object = find(
         data.deliveryPoint.openingSchedules,
         { dayOfTheWeek: day.toUpperCase() }
       );
 
       return obj.openingHours[0];
     })
-    .catch(e => console.error(e));
+    .catch((e: Object) => console.error(e));
 };
 
-export const destinationCoordinate = id => composedFetch(id)
-  .then(data => {
+export const destinationCoordinate = (id: string): Promise<coordinateType> => composedFetch(id)
+  .then((data: Object) => {
     return {
       latitude: data.deliveryPoint.latitude,
       longitude: data.deliveryPoint.longitude,
     };
   })
-  .catch(e => console.error(e));
+  .catch((e: Object) => console.error(e));
