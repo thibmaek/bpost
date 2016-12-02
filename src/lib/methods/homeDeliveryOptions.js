@@ -1,24 +1,24 @@
 import composedFetch from '../composedFetch.js';
 
-export const availableFrom = (id: Object): Object => composedFetch(id)
-  .then((data: Object) => data.earliestAvailableTime)
-  .catch((e: Object) => console.error(e));
+export const availableFrom = id => composedFetch(id)
+  .then(data => data.earliestAvailableTime)
+  .catch(e => console.error(e));
 
-export const availableTo = (id: Object): Object => composedFetch(id)
-  .then((data: Object) => data.latestAvailableTime)
-  .catch((e: Object) => console.error(e));
+export const availableTo = id => composedFetch(id)
+  .then(data => data.latestAvailableTime)
+  .catch(e => console.error(e));
 
-export const availableFromTo = (id: Object): Promise<string> => composedFetch(id)
-  .then((data: Object) => {
+export const availableFromTo = id => composedFetch(id)
+  .then(data => {
     const { earliestAvailableTime, latestAvailableTime } = data;
     return `Available from ${earliestAvailableTime.day} to ${latestAvailableTime.day}`;
   })
-  .catch((e: Object) => console.error(e));
+  .catch(e => console.error(e));
 
-export const attemptedDelivery = (id: Object): Promise<Object> => composedFetch(id)
-  .then((data: Object) => data.attemptedDeliveryTime)
-  .catch((e: Object) => console.error(e));
+export const attemptedDelivery = id => composedFetch(id)
+  .then(data => data.attemptedDeliveryTime)
+  .catch(e => console.error(e));
 
-export const actualDelivery = (id: Object): Promise<Object> => composedFetch(id)
-  .then((data: Object) => data.actualDeliveryTime)
-  .catch((e: Object) => console.error(e));
+export const actualDelivery = id => composedFetch(id)
+  .then(data => data.actualDeliveryTime)
+  .catch(e => console.error(e));

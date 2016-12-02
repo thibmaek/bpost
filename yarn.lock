@@ -255,16 +255,6 @@ babel-eslint@^7.0.0:
     babylon "^6.11.2"
     lodash.pickby "^4.6.0"
 
-babel-eslint@^7.1.1:
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-7.1.1.tgz#8a6a884f085aa7060af69cfc77341c2f99370fb2"
-  dependencies:
-    babel-code-frame "^6.16.0"
-    babel-traverse "^6.15.0"
-    babel-types "^6.15.0"
-    babylon "^6.13.0"
-    lodash.pickby "^4.6.0"
-
 babel-generator@^6.18.0:
   version "6.19.0"
   resolved "https://registry.yarnpkg.com/babel-generator/-/babel-generator-6.19.0.tgz#9b2f244204777a3d6810ec127c673c87b349fac5"
@@ -402,10 +392,6 @@ babel-plugin-jest-hoist@^17.0.2:
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
-
-babel-plugin-syntax-flow@^6.18.0:
-  version "6.18.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-syntax-flow/-/babel-plugin-syntax-flow-6.18.0.tgz#4c3ab20a2af26aa20cd25995c398c4eb70310c8d"
 
 babel-plugin-transform-async-to-generator@^6.16.0:
   version "6.16.0"
@@ -583,13 +569,6 @@ babel-plugin-transform-es2015-unicode-regex@^6.3.13:
     babel-helper-regex "^6.8.0"
     babel-runtime "^6.0.0"
     regexpu-core "^2.0.0"
-
-babel-plugin-transform-flow-strip-types@^6.18.0:
-  version "6.18.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-flow-strip-types/-/babel-plugin-transform-flow-strip-types-6.18.0.tgz#4d3e642158661e9b40db457c004a30817fa32592"
-  dependencies:
-    babel-plugin-syntax-flow "^6.18.0"
-    babel-runtime "^6.0.0"
 
 babel-plugin-transform-regenerator@^6.16.0:
   version "6.16.1"
@@ -1287,12 +1266,6 @@ eslint-plugin-babel@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-babel/-/eslint-plugin-babel-4.0.0.tgz#a92114e2c493ac3034b030d7ecf96e174a76ef3f"
 
-eslint-plugin-flowtype@^2.29.1:
-  version "2.29.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.29.1.tgz#74cc5603ff0baff6e224482bbd17406b0980f6c3"
-  dependencies:
-    lodash "^4.15.0"
-
 eslint-plugin-react@^6.4.1:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-6.7.1.tgz#1af96aea545856825157d97c1b50d5a8fb64a5a7"
@@ -1526,10 +1499,6 @@ flat-cache@^1.2.1:
     del "^2.0.2"
     graceful-fs "^4.1.2"
     write "^0.2.1"
-
-flow-bin@^0.36.0:
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.36.0.tgz#557907bd9c2ab0670cfad9e7e906a74b0631e39a"
 
 follow-redirects@1.0.0:
   version "1.0.0"
@@ -2657,7 +2626,7 @@ lodash.restparam@^3.0.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
 
-lodash@^4.0.0, lodash@^4.15.0, lodash@^4.2.0, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 

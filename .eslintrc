@@ -1,17 +1,9 @@
 {
-  "parser": "babel-eslint",
-  "plugins": ["flowtype"],
-  "extends": [
-    "devine",
-    "plugin:flowtype/recommended"
-  ],
+  "extends": "devine",
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
     "max-len": ["warn", 100],
     "object-shorthand": ["warn", "always"],
     "babel/object-curly-spacing": ["error", "always"],
-  },
-  "settings": {
-    "flowtype": {"onlyFilesWithFlowAnnotation": true}
   }
 }
