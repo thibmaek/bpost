@@ -1,5 +1,5 @@
-[
-  {
+{"items":
+  [{
     "key":{
       "id":759682715,
       "version":5,
@@ -173,3 +173,4 @@
     "requestedDeliveryMethod":"POSTAL_POINT",
     "inNetworkDate":"2016-11-09",
     "faqs":[{"id":"faqid_9","title":{"fr":"Puis-je donner procuration à quelqu'un pour aller chercher mon paquet au bureau de poste ou au Point Poste ?","nl":"Kan ik iemand machtigen om mijn pakje op te halen in het postkantoor of postpunt?","en":"Can I authorise someone to pick up my parcel at the post office or PostPoint?"}},{"id":"faqid_12","title":{"fr":"Combien de temps mon paquet reste-t-il disponible dans un point d'enlèvement ?","nl":"Hoe lang blijft mijn pakje ter beschikking in een afhaalpunt?","en":"How long will my parcel remain available for me at the pick-up point?"}},{"id":"faqid_13","title":{"fr":"Puis-je faire transférer mon paquet vers un autre point d'enlèvement ?","nl":"Kan ik mijn pakje laten transfereren naar een ander afhaalpunt?","en":"Can I ask for my parcel to be transferred to another pick-up point?"}},{"id":"faqid_14","title":{"fr":"Quand puis-je aller chercher mon paquet dans un point d'enlèvement? Quelles sont les heures d'ouverture ?","nl":"Wanneer kan ik mijn pakje gaan afhalen in een afhaalpunt? Wat zijn de openingsuren?","en":"When can I pick up my parcel at a pick-up point? What are the opening times?"}}],"retourOrBackToSender":false}]
+}

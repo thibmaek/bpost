@@ -1,0 +1,13 @@
+exports[`Method: droppedOffBySender should return the object when package is at origin 1`] = `
+Object {
+  "date": "2016-11-09",
+  "irregularity": false,
+  "key": "received.domestic-corner",
+  "location": Object {
+    "en": "PP PRESS SHOP WAASLAND",
+    "fr": "PP PRESS SHOP WAASLAND",
+    "nl": "PP PRESS SHOP WAASLAND",
+  },
+  "time": "18:04",
+}
+`;
