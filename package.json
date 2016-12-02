@@ -82,7 +82,7 @@
     "rollup-plugin-uglify": "^1.0.1"
   },
   "dependencies": {
-    "axios": "^0.15.2",
+    "axios": "^0.15.3",
     "lodash.find": "^4.6.0"
   },
   "engines": {
