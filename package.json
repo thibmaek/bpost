@@ -1,6 +1,6 @@
 {
   "name": "bpost",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "JavaScript API wrapper for bpost track &amp; trace",
   "main": "cjs/index.js",
   "browser": "dist/bpost.js",
@@ -37,7 +37,9 @@
     "notify": true,
     "setupTestFrameworkScriptFile": "__tests__/jestSetup.js",
     "testEnvironment": "node",
-    "testPathIgnorePatterns": ["jestSetup.js"]
+    "testPathIgnorePatterns": [
+      "jestSetup.js"
+    ]
   },
   "scripts": {
     "lint": "eslint src/*.js",
