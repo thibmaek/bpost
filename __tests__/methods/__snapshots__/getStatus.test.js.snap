@@ -1,0 +1,11 @@
+exports[`Method: getStatus should return the object for currently active step 1`] = `
+Object {
+  "knownProcessStep": "PICKED_UP_IN_POST_POINT_INTERNATIONAL",
+  "label": Object {
+    "detail": "inPostPoint",
+    "main": "pickedUp",
+  },
+  "name": "delivered",
+  "status": "active",
+}
+`;

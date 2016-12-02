@@ -1,5 +1,5 @@
-import { find } from 'lodash';
-import composedFetch from '../composedFetch';
+import find from 'lodash.find';
+import composedFetch from '../composedFetch.js';
 
 export const droppedOffBySender = id => composedFetch(id)
   .then(data => find(data.events, { key: `received.domestic-corner` }))

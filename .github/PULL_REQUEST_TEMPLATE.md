@@ -1,4 +1,5 @@
 <!-- This template was copied from facebook/react -->
+<!-- Please complete this template in the View tab, not the Write tab -->
 Before submitting a pull request, please make sure the following is done...
 
 - [ ] 1. Fork the repo and create your branch from master.

@@ -12,6 +12,10 @@
       "presets": [
         ["es2015", {"loose": true, "modules": false}]
       ]
+    },
+    "test": {
+      "presets": ["es2015"],
+      "plugins": ["transform-async-to-generator"]
     }
   }
 }

@@ -1,0 +1,13 @@
+exports[`Method: destinationCoordinate should return destination as 2D coordinate 1`] = `
+Object {
+  "latitude": 51.23154,
+  "longitude": 3.21387,
+}
+`;
+
+exports[`Method: openingHours should return the opening hours 1`] = `
+Object {
+  "close": "19:00",
+  "open": "07:00",
+}
+`;

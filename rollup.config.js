@@ -1,3 +1,4 @@
+// import resolveRoot from 'rollup-plugin-resolve-root';
 import babel from 'rollup-plugin-babel';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import uglify from 'rollup-plugin-uglify';
@@ -7,6 +8,9 @@ import commonjs from 'rollup-plugin-commonjs';
 const name = `bpost`;
 
 const plugins = [
+  // resolveRoot({
+  //   root: `${__dirname}`,
+  // }),
   babel(),
   nodeResolve({
     module: true,
@@ -14,9 +18,6 @@ const plugins = [
   }),
   commonjs({
     include: `node_modules/**`,
-    namedExports: {
-      'node_modules/lodash/lodash.js': [`find`],
-    },
   }),
   bundleSize(),
 ];
