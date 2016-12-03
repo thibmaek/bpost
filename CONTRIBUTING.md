@@ -27,7 +27,7 @@ In general, the contribution workflow looks like this:
 3. Create a **new branch** based off the master branch, provide a **descriptive name** <br/>(ex. '**ft**-add-better-logging', '**fix**-removed-double-method')
 4. Before running the code you’ll need to **install** the **dependencies** (`npm install` or `yarn`).
 5. **Implement** your feature / bugfix (using the **watch scripts**), you should **only need to modify `/src`**. Don’t worry about regenerating the build folders (`/cjs`, `/es`, `/dist`), they are **built** in the **prepublish** phase.
-6. Make sure **all tests pass**, **coverage is 100%** and there are **no linting errors**.
+6. Make sure **all tests pass**, **coverage is 70+%** for your new addition and there are **no linting errors**.
 7. Submit a **PR**, referencing what it addresses.
 8. Please try to keep your **PR focused in scope and try squashing them before sending a PR. Lots of commits will be squashed**, use **[Gitmoji](https://gitmoji.carloscuesta.me/)** in your commits.
 
@@ -72,13 +72,13 @@ You can **run the test script** by using
 $ npm test
 ```
 
-or with coverage
+or if your test requires changes to existing snapshots:
 
 ```console
-$ npm run test:coverage
+$ npm run test:update
 ```
 
-Aim for **100% [coverage](https://en.wikipedia.org/wiki/Code_coverage)**.
+Try getting 70%+ coverage on newly introduced code.
 
 ## Hooks
 

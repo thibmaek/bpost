@@ -110,7 +110,7 @@ __bpost#destinationCoordinate(id: String)__
 
 ## Examples
 
-see the [`examples`](example/) folder or the [runkit](https://runkit.com/thibmaek/bpost) example
+see the [`examples`](example/) folder. A working example is available on [cloud9](https://ide.c9.io/thibmaek_1/bpost).
 
 ### Contributing
 We are open to contributions, see [CONTRIBUTING.md](CONTRIBUTING.md) for more info.
