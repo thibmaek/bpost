@@ -6,7 +6,7 @@ const {
   destinationAsAddress,
 } = require(`bpost`);
 
-const ID = `323267009691651472;
+const ID = `323267009691651472`;
 
 getStatus(ID).then(r => console.log(r)); // 📋 {"name":"processing", "status":"active", …}
 
