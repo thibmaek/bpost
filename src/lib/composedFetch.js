@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require(`axios`);
 
 export default itemIdentifier => axios.get(`items`, {
   baseURL: `https://track.bpost.be/btr/api/`,
