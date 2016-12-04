@@ -1,10 +1,9 @@
 // Preset some stuff for async data flow
-beforeAll(done => {
+beforeAll(() => {
   global.BPOST_ID_POSTAL = process.env.npm_package_jest_globals_ID_POSTAL;
   global.BPOST_ID_HOME = process.env.npm_package_jest_globals_ID_HOME;
   global.BPOST_ID_FALSE = process.env.npm_package_jest_globals_ID_FALSE;
   global.jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
-  done();
 });
 
 // Reset the things we changed
