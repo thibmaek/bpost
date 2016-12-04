@@ -20,7 +20,7 @@ export const destinationAsAddress = id => composedFetch(id)
   .catch(e => console.error(e));
 
 export const openingHours = (id, day) => {
-  if (!day) throw new Error(`Please specify a day`);
+  if (!day) throw new TypeError(`Please specify a day`);
 
   return composedFetch(id)
     .then(data => {
