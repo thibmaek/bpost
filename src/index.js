@@ -1,48 +1,36 @@
+/* eslint-disable max-len */
 import getStatus from './lib/methods/getStatus.js';
 import { droppedOffBySender, availableForPickup } from './lib/methods/events.js';
-import {
-  getPackageWeight,
-  identifier,
-  deliveryMethod,
-  hasRetourOptions,
-  receiver,
-} from './lib/methods/packageInfo.js';
-import {
-  sourcePostalPoint,
-  destinationPostalPoint,
-  destinationAsAddress,
-  openingHours,
-  destinationCoordinate,
-} from './lib/methods/postalPointOptions.js';
-import {
-  availableFrom,
-  availableTo,
-  availableFromTo,
-  attemptedDelivery,
-  actualDelivery,
-} from './lib/methods/homeDeliveryOptions.js';
+import { getPackageWeight, identifier, deliveryMethod, hasRetourOptions, receiver } from './lib/methods/packageInfo.js';
+import { sourcePostalPoint, destinationPostalPoint, destinationAsAddress, openingHours, destinationCoordinate } from './lib/methods/postalPointOptions.js';
+import { availableFrom, availableTo, availableFromTo, attemptedDelivery, actualDelivery } from './lib/methods/homeDeliveryOptions.js';
+/* eslint-enable max-len */
 
-export default {
-  getStatus,
+export default ID => {
+  if (!ID) throw new TypeError(`An ID needs to be passed`);
 
-  droppedOffBySender,
-  availableForPickup,
+  return {
+    getStatus: () => getStatus(ID),
 
-  getPackageWeight,
-  deliveryMethod,
-  identifier,
-  hasRetourOptions,
-  receiver,
+    droppedOffBySender: () => droppedOffBySender(ID),
+    availableForPickup: () => availableForPickup(ID),
 
-  sourcePostalPoint,
-  destinationPostalPoint,
-  destinationAsAddress,
-  openingHours,
-  destinationCoordinate,
+    getPackageWeight: () => getPackageWeight(ID),
+    deliveryMethod: () => deliveryMethod(ID),
+    identifier: () => identifier(ID),
+    hasRetourOptions: () => hasRetourOptions(ID),
+    receiver: () => receiver(ID),
 
-  availableFrom,
-  availableTo,
-  availableFromTo,
-  attemptedDelivery,
-  actualDelivery,
+    sourcePostalPoint: () => sourcePostalPoint(ID),
+    destinationPostalPoint: () => destinationPostalPoint(ID),
+    destinationAsAddress: () => destinationAsAddress(ID),
+    openingHours: day => openingHours(ID, day),
+    destinationCoordinate: () => destinationCoordinate(ID),
+
+    availableFrom: () => availableFrom(ID),
+    availableTo: () => availableTo(ID),
+    availableFromTo: () => availableFromTo(ID),
+    attemptedDelivery: () => attemptedDelivery(ID),
+    actualDelivery: () => actualDelivery(ID),
+  };
 };
