@@ -1,21 +1,21 @@
 import find from 'lodash.find';
 import composedFetch from '../composedFetch.js';
 
-export const sourcePostalPoint = id => composedFetch(id)
+export const sourcePostalPoint = (id, lang = `en`) => composedFetch(id)
   .then(data => {
     const result = find(data.events, { key: `received.domestic-corner` });
-    return result.location.en;
+    return result.location[lang];
   })
   .catch(e => console.error(e));
 
-export const destinationPostalPoint = id => composedFetch(id)
-  .then(data => data.deliveryPoint.name.en)
+export const destinationPostalPoint = (id, lang = `en`) => composedFetch(id)
+  .then(data => data.deliveryPoint.name[lang])
   .catch(e => console.error(e));
 
-export const destinationAsAddress = id => composedFetch(id)
+export const destinationAsAddress = (id, lang = `en`) => composedFetch(id)
   .then(data => {
     const obj = data.deliveryPoint;
-    return `${obj.street.en} ${obj.streetNumber.en}, ${obj.postcode.en} ${obj.municipality.en}`;
+    return `${obj.street[lang]} ${obj.streetNumber[lang]}, ${obj.postcode[lang]} ${obj.municipality[lang]}`; // eslint-disable-line max-len
   })
   .catch(e => console.error(e));
 

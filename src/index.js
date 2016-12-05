@@ -6,7 +6,7 @@ import { sourcePostalPoint, destinationPostalPoint, destinationAsAddress, openin
 import { availableFrom, availableTo, availableFromTo, attemptedDelivery, actualDelivery } from './lib/methods/homeDeliveryOptions.js';
 /* eslint-enable max-len */
 
-export default ID => {
+export default (ID, lang = `en`) => {
   if (!ID) throw new TypeError(`An ID needs to be passed`);
 
   return {
@@ -21,9 +21,9 @@ export default ID => {
     hasRetourOptions: () => hasRetourOptions(ID),
     receiver: () => receiver(ID),
 
-    sourcePostalPoint: () => sourcePostalPoint(ID),
-    destinationPostalPoint: () => destinationPostalPoint(ID),
-    destinationAsAddress: () => destinationAsAddress(ID),
+    sourcePostalPoint: () => sourcePostalPoint(ID, lang),
+    destinationPostalPoint: () => destinationPostalPoint(ID, lang),
+    destinationAsAddress: () => destinationAsAddress(ID, lang),
     openingHours: day => openingHours(ID, day),
     destinationCoordinate: () => destinationCoordinate(ID),
 
