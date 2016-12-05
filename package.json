@@ -44,6 +44,7 @@
   "scripts": {
     "lint": "eslint src/*.js",
     "test": "jest --coverage",
+    "test:ci": "npm run lint && npm test && npm run build:es && npm run build:cjs && npm run build:umd",
     "test:update": "npm test -- -u",
     "test:watch": "jest --onlyChanged",
     "lint:build:test": "npm run lint && npm run build:cjs && npm run test",
