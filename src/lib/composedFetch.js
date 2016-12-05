@@ -5,4 +5,4 @@ export default itemIdentifier => axios.get(`items`, {
   responseType: `json`,
   params: { itemIdentifier },
 }).then(res => res.data.items[0])
-.catch(e => e);
+.catch(e => console.error(e));

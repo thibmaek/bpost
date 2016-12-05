@@ -3,7 +3,7 @@ import composedFetch from '../composedFetch.js';
 
 export const droppedOffBySender = id => composedFetch(id)
   .then(data => find(data.events, { key: `received.domestic-corner` }))
-  .catch(e => console.log(e));
+  .catch(e => console.error(e));
 
 export const availableForPickup = id => {
   composedFetch(id)
@@ -12,5 +12,5 @@ export const availableForPickup = id => {
     { knownProcessStep: `AVAILABLE_IN_POST_POINT_INTERNATIONAL` }
   ))
   .then(obj => (obj.status === `active` ? true : false))
-  .catch(e => console.log(e));
+  .catch(e => console.error(e));
 };
