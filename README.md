@@ -32,78 +32,81 @@ This module was created using the magnificent [generator-module-boilerplate](htt
 ### setup
 
 ```js
-// es native
 import bpost from 'bpost';
+// or CommonJS: const bpost = require('bpost');
 
-// CommonJS
-const bpost = require('bpost');
+// Setup your package for calling methods on it:
+const pkg = bpost(`SOMEIDHERE`);
 ```
 
 ### methods
+__bpost(id: String)__
+> Object: returns all the available methods on bpost package. You should only need this to instantiate your package.
+
 #### events.js
-__bpost#droppedOffBySender(id: String)__
+__bpost#droppedOffBySender()__
 > Object: returns information when package has been received at source postal point
 
-__bpost#availableForPickup(id: String)__
+__bpost#availableForPickup()__
 > Boolean: returns true when package is available for pickup
 
 #### getStatus.js
-__bpost#getStatus(id: String)__
+__bpost#getStatus()__
 > Object: returns the currently active step
 
 #### homeDeliveryOptions.js
-__bpost#availableFrom(id: String)__
+__bpost#availableFrom()__
 > Object: returns the earliest time and day that a package can be picked up after absence
 
-__bpost#availableTo(id: String)__
+__bpost#availableTo()__
 > Object: returns the latest time and day that a package can be picked up after absence
 
-__bpost#availableFromTo(id: String)__
+__bpost#availableFromTo()__
 > String: returns a formatted string stating the period (in days) a package can be picked up after absence
 (e.g `"Available from 2016-11-23 to 2016-12-07"`)
 
-__bpost#attemptedDelivery(id: String)__
+__bpost#attemptedDelivery()__
 > Object: returns the time and day that delivery was attempted but receiver was absent
 
-__bpost#actualDelivery(id: String)__
+__bpost#actualDelivery()__
 > Object: returns the time and day when a package was picked up from the postal point, receiving the absently delivered package
 
 #### packageInfo.js
-__bpost#getPackageWeight(id: String)__
+__bpost#getPackageWeight()__
 > Number: returns the package weight in grams
 
-__bpost#deliveryMethod(id: String)__
+__bpost#deliveryMethod()__
 > String: returns the requested delivery method
 (e.g `"POSTAL_POINT"`)
 
-__bpost#identifier(id: String)__
+__bpost#identifier()__
 > Number: returns the internal id for package
 _❗ this is different from the itemIdentifier param passed to the methods as first argument_
 
-__bpost#hasRetourOptions(id: String)__
+__bpost#hasRetourOptions()__
 > Boolean: returns true when package is eligible for retour
 
-__bpost#receiver(id: String, formatted: Boolean)__
+__bpost#receiver(formatted: Boolean)__
 > Object: returns data for the receiver
 > String: returns a formatted string with receiver data
 (eg. `"THIBAULT MAEKELBERGH, 8000 BRUGGE, BE"`)
 
 #### postalPointOptions.js
-__bpost#sourcePostalPoint(id: String)__
+__bpost#sourcePostalPoint()__
 > String: returns the English name for the postal point where your package is delivered by the sender
 
-__bpost#destinationPostalPoint(id: String)__
+__bpost#destinationPostalPoint()__
 > String: returns the English name for the postal point where your package is delivered for the recipient
 
-__bpost#destinationAsAddress(id: String)__
+__bpost#destinationAsAddress()__
 > String: returns a formatted string with the complete destination address
 (eg. `"Pathoekeweg 73, 8000 Brugge"`)
 
-__bpost#openingHours(id: String, day: String)__
+__bpost#openingHours(day: String)__
 > Object: returns opening and closing times on the given day
 (eg. `{ open: "07:00", close: "19:00" }`)
 
-__bpost#destinationCoordinate(id: String)__
+__bpost#destinationCoordinate()__
 > Object: returns a 2D lat long coordinate of the destination
 (eg. `{ "longitude": 3.21387, "latitude": 51.23154, }`)
 
