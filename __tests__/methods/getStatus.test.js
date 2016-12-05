@@ -5,4 +5,9 @@ describe(`Method: getStatus`, () => {
     const request = await bpost.default(global.BPOST_ID_POSTAL);
     expect(request).toMatchSnapshot();
   });
+
+  it(`should throw if the id param is incorrect`, async () => {
+    const request = await bpost.default(`eval();`);
+    expect(request).toThrow();
+  });
 });
