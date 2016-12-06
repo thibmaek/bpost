@@ -24,8 +24,8 @@
   ],
   "config": {
     "ghooks": {
-      "pre-commit": "npm run lint:build:test",
-      "pre-push": "npm run lint:build:test"
+      "pre-commit": "opt --out pre-commit -exec \"npm run lint:build:test\"",
+      "pre-push": "opt --out pre-commit -exec \"npm run lint:build:test\""
     }
   },
   "jest": {
@@ -74,6 +74,7 @@
     "jest": "^17.0.3",
     "np": "^2.10.1",
     "npm-watch": "^0.1.6",
+    "opt-cli": "^1.5.1",
     "rimraf": "^2.5.4",
     "rollup": "^0.36.4",
     "rollup-plugin-babel": "^2.6.1",
