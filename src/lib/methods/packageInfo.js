@@ -1,20 +1,16 @@
 import composedFetch from '../composedFetch.js';
 
 export const getPackageWeight = id => composedFetch(id)
-  .then(data => data.weightInGrams)
-  .catch(e => e);
+  .then(data => data.weightInGrams);
 
 export const identifier = id => composedFetch(id)
-  .then(data => data.key.id)
-  .catch(e => e);
+  .then(data => data.key.id);
 
 export const deliveryMethod = id => composedFetch(id)
-  .then(data => data.requestedDeliveryMethod.toLowerCase().split(`_`))
-  .catch(e => e);
+  .then(data => data.requestedDeliveryMethod.toLowerCase().split(`_`));
 
 export const hasRetourOptions = id => composedFetch(id)
-  .then(data => data.retourOrBackToSender ? true : false)
-  .catch(e => e);
+  .then(data => data.retourOrBackToSender ? true : false);
 
 export const receiver = (id, formatted = false) => composedFetch(id)
   .then(data => {
@@ -24,5 +20,4 @@ export const receiver = (id, formatted = false) => composedFetch(id)
     } else {
       return data.receiver;
     }
-  })
-  .catch(e => e);
+  });

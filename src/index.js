@@ -7,7 +7,8 @@ import { availableFrom, availableTo, availableFromTo, attemptedDelivery, actualD
 /* eslint-enable max-len */
 
 export default (ID, lang = `en`) => {
-  if (!ID) throw new TypeError(`An ID needs to be passed`);
+  if (!ID) throw new Error(`An ID needs to be passed`);
+  if (typeof ID !== `string`) throw new TypeError(`ID needs to be of type: string`);
 
   return {
     getStatus: () => getStatus(ID),

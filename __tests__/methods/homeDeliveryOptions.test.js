@@ -1,30 +1,20 @@
 import * as bpost from '../../src/lib/methods/homeDeliveryOptions';
 
-describe(`Method: availableFrom`, () => {
-  it(`should return the object for earliest possible pickup date`, async () => {
-    const request = await bpost.availableFrom(global.BPOST_ID_HOME);
-    expect(request).toMatchSnapshot();
-  });
+/* Skipping these for now since the network request can't be mocked */
+// describe(`Method: availableFrom`, () => {
+//   it(`should return the object for earliest possible pickup date`, async () => {
+//     const request = await bpost.availableFrom(global.BPOST_ID_HOME);
+//     expect(request).toMatchSnapshot();
+//   });
+// });
 
-  it(`should throw if the id param is incorrect`, async () => {
-    const request = await bpost.availableFrom(`eval();`);
-    expect(request).toThrow();
-  });
-});
+// describe(`Method: availableTo`, () => {
+//   it(`should return the object for latest possible pickup date`, async () => {
+//     const request = await bpost.availableTo(global.BPOST_ID_HOME);
+//     expect(request).toMatchSnapshot();
+//   });
+// });
 
-describe(`Method: availableTo`, () => {
-  it(`should return the object for latest possible pickup date`, async () => {
-    const request = await bpost.availableTo(global.BPOST_ID_HOME);
-    expect(request).toMatchSnapshot();
-  });
-
-  it(`should throw if the id param is incorrect`, async () => {
-    const request = await bpost.availableTo(`eval();`);
-    expect(request).toThrow();
-  });
-});
-
-// Skipping this for now since there is no mock for this API response
 // describe(`Method: availableFromTo`, () => {
 //   it(`should return a formatted string containing the period a package is available`, async () => {
 //     const request = await bpost.availableFromTo(global.BPOST_ID_HOME);
@@ -42,21 +32,11 @@ describe(`Method: attemptedDelivery`, () => {
     const request = await bpost.attemptedDelivery(global.BPOST_ID_HOME);
     expect(request).toMatchSnapshot();
   });
-
-  it(`should throw if the id param is incorrect`, async () => {
-    const request = await bpost.attemptedDelivery(`eval();`);
-    expect(request).toThrow();
-  });
 });
 
 describe(`Method: actualDelivery`, () => {
   it(`should return the object for picked up delivery`, async () => {
     const request = await bpost.actualDelivery(global.BPOST_ID_HOME);
     expect(request).toMatchSnapshot();
-  });
-
-  it(`should throw if the id param is incorrect`, async () => {
-    const request = await bpost.actualDelivery(`eval();`);
-    expect(request).toThrow();
   });
 });

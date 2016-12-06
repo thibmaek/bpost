@@ -5,21 +5,11 @@ describe(`Method: droppedOffBySender`, () => {
     const request = await bpost.droppedOffBySender(global.BPOST_ID_POSTAL);
     expect(request).toMatchSnapshot();
   });
-
-  it(`should throw if the id param is incorrect`, async () => {
-    const request = await bpost.droppedOffBySender(`eval();`);
-    expect(request).toThrow();
-  });
 });
 
 describe(`Method: availableForPickup`, () => {
   it(`should return true or false according to availability`, async () => {
     const request = await bpost.availableForPickup(global.BPOST_ID_POSTAL);
     expect(request).toBeFalsy();
-  });
-
-  it(`should throw if the id param is incorrect`, async () => {
-    const request = await bpost.availableForPickup(`eval();`);
-    expect(request).toThrow();
   });
 });
