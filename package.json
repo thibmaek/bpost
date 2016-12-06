@@ -1,6 +1,6 @@
 {
   "name": "bpost",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "JavaScript API wrapper for bpost track &amp; trace",
   "main": "cjs/index.js",
   "browser": "dist/bpost.js",
