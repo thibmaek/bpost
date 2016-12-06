@@ -24,8 +24,8 @@
   ],
   "config": {
     "ghooks": {
-      "pre-commit": "opt --out pre-commit -exec \"npm run lint:build:test\"",
-      "pre-push": "opt --out pre-commit -exec \"npm run lint:build:test\""
+      "pre-commit": "opt --out pre-commit --exec \"npm run lint:build:test\"",
+      "pre-push": "opt --out pre-commit --exec \"npm run lint:build:test\""
     }
   },
   "jest": {
