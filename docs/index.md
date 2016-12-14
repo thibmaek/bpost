@@ -1,4 +1,6 @@
-Table of contents:
-
-1. [Installing the module](/pages/installing.md)
-2. [Constructing a track & trace session with `bpost()`](/pages/constructor.md)
+---
+layout: default
+---
+### methods
+__bpost(id: String, ?lang: String = `en`)__
+> Object: returns all the available methods on bpost package. You should only need this to instantiate your package. Takes an optional second parameter `lang` which is used to return localized values from the API response (this parameter defaults to `en`)

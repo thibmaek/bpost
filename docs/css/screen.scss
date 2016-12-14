@@ -1,0 +1,28 @@
+@import 'reset';
+
+code {
+  background-color: rgba(0, 0, 0, .04);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: .2em;
+  padding-top: .2em;
+
+  &::before,
+  &::after {
+    content: '\00a0';
+    letter-spacing: -.2em;
+  }
+}
+
+pre {
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+  word-break: normal;
+  word-wrap: normal;
+}

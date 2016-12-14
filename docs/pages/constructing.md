@@ -1,6 +1,5 @@
-# Constructing a track & trace session with bpost()
-
-With the module installed and imported/required you'll first need to construct a new instance to tell bpost which 
+# Constructing a track & trace session with bpost
+With the module installed and imported/required you'll first need to construct a new instance to tell bpost which
 package to track. This constructor expects 1 parameter `id` that corresponds to the id or barcode for your package:
 ```js
 import bpost from 'bpost';
@@ -18,7 +17,7 @@ const weight = pkg.packageWeight();
 ```
 
 ## Destructured method imports
-When you destructure your imports to only load the methods your project requires you'll need to explicitly pass the ID 
+When you destructure your imports to only load the methods your project requires you'll need to explicitly pass the ID
 to the methods each time you call one:
 ```js
 import { getStatus, sourcePostalPoint, packageWeight } from 'bpost';
@@ -28,7 +27,7 @@ getStatus(ID);
 sourcePostalPoint(ID);
 packageWeight(ID);
 ```
-Do note that this constructor is actually just passing along the id and doesn't actually act as a programmatic 
+Do note that this constructor is actually just passing along the id and doesn't actually act as a programmatic
 constructor. Therefore there is nothing exposed to the global so this won't work:
 ```js
 import bpost, { getStatus, sourcePostalPoint, packageWeight } from 'bpost';
