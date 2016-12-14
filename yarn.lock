@@ -1273,9 +1273,9 @@ eslint-plugin-react@^6.4.1:
     doctrine "^1.2.2"
     jsx-ast-utils "^1.3.3"
 
-eslint@^3.11.1:
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.11.1.tgz#408be581041385cba947cd8d1cd2227782b55dbf"
+eslint@^3.12.1:
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.12.1.tgz#507a609fe251dfefd58fda03e6dbd7e851c07581"
   dependencies:
     babel-code-frame "^6.16.0"
     chalk "^1.1.3"
@@ -1288,7 +1288,7 @@ eslint@^3.11.1:
     esutils "^2.0.2"
     file-entry-cache "^2.0.0"
     glob "^7.0.3"
-    globals "^9.2.0"
+    globals "^9.14.0"
     ignore "^3.2.0"
     imurmurhash "^0.1.4"
     inquirer "^0.12.0"
@@ -1648,9 +1648,13 @@ glob@^7.0.0, glob@^7.0.3, glob@^7.0.5:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-globals@^9.0.0, globals@^9.2.0:
+globals@^9.0.0:
   version "9.13.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-9.13.0.tgz#d97706b61600d8dbe94708c367d3fdcf48470b8f"
+
+globals@^9.14.0:
+  version "9.14.0"
+  resolved "https://registry.yarnpkg.com/globals/-/globals-9.14.0.tgz#8859936af0038741263053b39d0e76ca241e4034"
 
 globby@^5.0.0:
   version "5.0.0"
@@ -2914,9 +2918,9 @@ normalize-path@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-2.0.1.tgz#47886ac1662760d4261b7d979d241709d3ce3f7a"
 
-np@^2.10.1:
-  version "2.10.1"
-  resolved "https://registry.yarnpkg.com/np/-/np-2.10.1.tgz#a808e62c1949826ff695f0c83489fabcf882422c"
+np@^2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/np/-/np-2.11.0.tgz#13f1b645680413fda417202eaf5c9e947a0f5312"
   dependencies:
     any-observable "^0.2.0"
     chalk "^1.1.3"
@@ -2924,6 +2928,7 @@ np@^2.10.1:
     execa "^0.4.0"
     inquirer "^1.2.1"
     listr "^0.6.1"
+    log-symbols "^1.0.2"
     meow "^3.7.0"
     read-pkg-up "^1.0.1"
     rxjs "^5.0.0-beta.9"
@@ -3444,9 +3449,9 @@ rimraf@2, rimraf@^2.2.8, rimraf@^2.4.3, rimraf@^2.4.4, rimraf@^2.5.4, rimraf@~2.
   dependencies:
     glob "^7.0.5"
 
-rollup-plugin-babel@^2.6.1:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-babel/-/rollup-plugin-babel-2.6.1.tgz#470b03486337045d7e8a3e43fc5fc00e8db82c26"
+rollup-plugin-babel@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-babel/-/rollup-plugin-babel-2.7.1.tgz#16528197b0f938a1536f44683c7a93d573182f57"
   dependencies:
     babel-core "6"
     babel-plugin-transform-es2015-classes "^6.9.0"
