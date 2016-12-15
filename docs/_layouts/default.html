@@ -1,12 +1,19 @@
-<html lang='en-us'>
-  <head>
-    <title>bpost - Modern JavaScript API wrapper for bpost track &amp; trace</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta charset='UTF-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=Edge'>
-    <link rel='stylesheet' href='css/screen.css'>
-  </head>
-  <body>
-
-  </body>
+<!DOCTYPE html>
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include topnav.html %}
+  <main class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <div class="row">
+      <div class="col-md-3">
+      {% include sidebar.html %}
+        <div class="col-md-9">
+        {{content}}
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
 </html>

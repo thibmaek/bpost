@@ -1,0 +1,23 @@
+entries:
+- title: sidebar
+  product: bpost
+  version: 1.0.0
+  folders:
+    - title: Getting Started
+      folderitems:
+        - title: Installing
+          url: /installing
+        - title: Constructing a session
+          url: /constructing
+    - title: Methods
+      folderitems:
+        - title: Getting active status
+          url: /status
+        - title: Getting package Info
+          url: /packageinfo
+        - title: Getting package events
+          url: /events
+        - title: Home delivery options
+          url: /homedelivery
+        - title: Postal point options
+          url: /postalpoint

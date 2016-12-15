@@ -1,0 +1,38 @@
+# Documentation settings
+topnav_title: Bpost
+site_title: "bpost: Modern JavaScript API wrapper for bpost track & trace"
+github:
+  repo: https://github.com/thibmaek/bpost
+  docs: tree/master/docs
+sidebars: main_sidebar
+
+# Build settings
+host: 127.0.0.1
+port: 4000
+gems:
+  - algoliasearch-jekyll
+algolia:
+  application_id: 'NISX7ZQBUY'
+  index_name: 'bpost_docs'
+exclude:
+  - .gitignore
+  - .DS_Store
+
+# Formatting settings
+feedback_disable: true
+highlighter: rouge
+markdown: kramdown
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      search: true
+      sidebar: main_sidebar
