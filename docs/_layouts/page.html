@@ -11,7 +11,10 @@ layout: default
   {% endif %}
 
   {% if site.github.docs %}
-  <a target="_blank" rel="noopener" href="{{ site.github.repo }}/{{ site.github.docs }}{% unless page.url contains "index" %}/pages{% endunless %}{{page.folder}}{{page.url | remove: ".html" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+  <a target="_blank" rel="noopener" href="{{ site.github.repo }}/{{ site.github.docs }}{% unless page.url contains "index" %}/pages{% endunless %}{{page.folder}}{{page.url | remove: ".html" | append: ".md"}}"
+      class="btn btn-default githubEditButton" role="button">
+    <i class="material-icons">mode_edit</i>Edit this page on Github
+  </a>
   {% endif %}
 
   {{content}}

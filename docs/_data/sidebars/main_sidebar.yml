@@ -9,6 +9,8 @@ entries:
           url: /installing
         - title: Constructing a session
           url: /constructing
+        - title: "Multi-language data returns"
+          url: /multilanguage
     - title: Methods
       folderitems:
         - title: Getting active status

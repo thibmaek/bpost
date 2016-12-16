@@ -3,7 +3,7 @@ title: Getting active status
 permalink: status
 sidebar: main
 ---
-## `#getStatus()`
+## `#getStatus`
 
 ### Description
 `bpost.getStatus()` will search for the currently active step in the delivery process of the package.
@@ -25,12 +25,12 @@ getStatus(`323267009691651472`).then(res => res);
 ### Output
 ```js
 {
-  "knownProcessStep": "PICKED_UP_IN_POST_POINT_INTERNATIONAL",
-  "label": {
-    "detail": "inPostPoint",
-    "main": "pickedUp",
+  knownProcessStep: "PICKED_UP_IN_POST_POINT_INTERNATIONAL",
+  label: {
+    detail: "inPostPoint",
+    main: "pickedUp",
   },
-  "name": "delivered",
-  "status": "active",
+  name: "delivered",
+  status: "active",
 }
 ```

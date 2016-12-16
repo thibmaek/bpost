@@ -1,0 +1,83 @@
+:root {
+  --white: white;
+  --white-one: #fafafa;
+  --black-one: #333;
+  --blue-one: #248ec2;
+  --blue-two: #f1e05a;
+  --blue-three: #015cae;
+  --red-one: #ed1951;
+  --gray-one: #808080;
+}
+
+.summary {
+  color: var(--gray-one);
+  border-left: 5px solid ;
+  font-size:16px;
+}
+
+h3 {color: var(--red-one);}
+h4 {color: var(--gray-one);}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  background-color: var(--blue-one);
+  color: var(--white);
+}
+
+.nav > li.active > a { background-color: var(--blue-two); }
+.nav > li > a:hover { background-color: var(--blue-one); }
+
+div.navbar-collapse .dropdown-menu > li > a:hover { background-color: var(--blue-two); }
+
+.nav li.thirdlevel > a {
+  background-color: var(--white-one) !important;
+  color: var(--blue-one);
+  font-weight: bold;
+}
+
+.navbar-inverse {
+  background-color: var(--blue-two);
+  border-color: var(--blue-three);
+}
+
+.navbar .navbar-inverse {
+  color: var(--black-one);
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  color: var(--blue-three);
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: var(--blue-three);
+  color: var(--white);
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--blue-two);
+  border-color: var(--blue-two);
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: var(--blue-two);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-color: var(--blue-one);
+  border-color: var(--blue-two);
+}
+
+div.sidebarTitle { color: var(--blue-three); }
+
+li.sidebarTitle {
+  margin-top:40px;
+  font-weight:normal;
+  font-size:130%;
+  color: var(--red-one);
+  margin-bottom:10px;
+  margin-left: 5px;
+}

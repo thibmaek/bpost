@@ -1,9 +1,9 @@
 ---
+title: Installing the module
 layout: page
 permalink: installing
 sidebar: main
 ---
-# Installing the module
 The module is offered on the npm registry and as a minified js ES5 build. The latter is available on unpkg. The
 recommended way to install bpost is trough the package managers npm or yarn:
 

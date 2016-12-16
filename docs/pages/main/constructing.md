@@ -1,8 +1,8 @@
 ---
+title: Constructing a track & trace session with bpost
 permalink: constructing
 sidebar: main
 ---
-# Constructing a track & trace session with bpost
 With the module installed and imported/required you'll first need to construct a new instance to tell bpost which
 package to track. This constructor expects 1 parameter `id` that corresponds to the id or barcode for your package:
 

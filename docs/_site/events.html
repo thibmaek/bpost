@@ -5,76 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="keywords" content=" ">
-<title>Getting package events | Modern JavaScript API wrapper for bpost track & trace</title>
+<title>Getting package events | bpost: Modern JavaScript API wrapper for bpost track & trace</title>
 <link rel="stylesheet" href="css/syntax.css">
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
 <link rel="stylesheet" href="css/customstyles.css">
-<link rel="stylesheet" href="css/theme-blue.css">
-<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/screen.css">
+<link rel="shortcut icon" href="images/favicon.png">
 
 </head>
 <body>
   <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container topnavlinks">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Bpost</span></a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <!-- entries without drop-downs appear here -->
-                
-                
-                
+  <div class="container topnavlinks">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="material-icons navbar-brand" href="index.html">store<span class="projectTitle"> Bpost</span></a>
+    </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <!-- entries without drop-downs appear here -->
+          
+            
+              
                 <li><a href="https://github.com/thibmaek/bpost/releases" target="_blank">Changelog</a></li>
-                
-                
-                
+              
+            
+              
                 <li><a href="https://github.com/thibmaek/bpost/issues" target="_blank">Issues</a></li>
-                
-                
-                
+              
+            
+              
                 <li><a href="https://github.com/thibmaek/bpost/projects" target="_blank">Roadmap</a></li>
-                
-                
-                
-                <!-- entries with drop-downs appear here -->
-                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                
-                
-                <!--comment out this block if you want to hide search-->
-                <li>
-                    <!--start search-->
-                    <div id="search-demo-container">
-                        <input type="text" id="search-input" placeholder="search...">
-                        <ul id="results-container"></ul>
-                    </div>
-                    <script src="js/jekyll-search.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                            SimpleJekyllSearch.init({
-                                searchInput: document.getElementById('search-input'),
-                                resultsContainer: document.getElementById('results-container'),
-                                dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Getting package events">{title}</a></li>',
-                    noResultsText: 'No results found.',
-                            limit: 10,
-                            fuzzy: true,
-                    })
-                    </script>
-                    <!--end search-->
-                </li>
-            </ul>
-        </div>
-        </div>
-        <!-- /.container -->
+              
+            
+          
+          <!-- entries with drop-downs appear here -->
+          <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+          
+          <li>
+            <div id="search-demo-container">
+              <input type="text" id="search-input" placeholder="search...">
+              <ul id="results-container"></ul>
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
 </nav>
 
   <main class="container">
@@ -97,6 +79,10 @@
           
             
               <li><a href="constructing.html">Constructing a session</a></li>
+            
+          
+            
+              <li><a href="multilanguage.html">Multi-language data returns</a></li>
             
           
         </ul>
@@ -142,10 +128,13 @@
   
 
   
-  <a target="_blank" rel="noopener" href="https://github.com/thibmaek/bpost/tree/master/docs/pages/events.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+  <a target="_blank" rel="noopener" href="https://github.com/thibmaek/bpost/tree/master/docs/pages/events.md"
+      class="btn btn-default githubEditButton" role="button">
+    <i class="material-icons">mode_edit</i>Edit this page on Github
+  </a>
   
 
-  <h2 id="droppedoffbysender"><code class="highlighter-rouge">#droppedOffBySender()</code></h2>
+  <h2 id="droppedoffbysender"><code class="highlighter-rouge">#droppedOffBySender</code></h2>
 
 <h3 id="description">Description</h3>
 <p><code class="highlighter-rouge">bpost.droppedOffBySender()</code> will return information when the package is dropped off by the sender at sender’s source postal point.
@@ -177,20 +166,20 @@ It requires one passed parameter <code class="highlighter-rouge">id</code> and r
 
 <h3 id="output">Output</h3>
 <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
-  <span class="s2">"date"</span><span class="err">:</span> <span class="s2">"2016-11-09"</span><span class="p">,</span>
-  <span class="s2">"irregularity"</span><span class="err">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="s2">"key"</span><span class="err">:</span> <span class="s2">"received.domestic-corner"</span><span class="p">,</span>
-  <span class="s2">"location"</span><span class="err">:</span> <span class="p">{</span>
-    <span class="s2">"en"</span><span class="err">:</span> <span class="s2">"PP PRESS SHOP WAASLAND"</span><span class="p">,</span>
-    <span class="s2">"fr"</span><span class="err">:</span> <span class="s2">"PP PRESS SHOP WAASLAND"</span><span class="p">,</span>
-    <span class="s2">"nl"</span><span class="err">:</span> <span class="s2">"PP PRESS SHOP WAASLAND"</span><span class="p">,</span>
+  <span class="nl">date</span><span class="p">:</span> <span class="s2">"2016-11-09"</span><span class="p">,</span>
+  <span class="nx">irregularity</span><span class="err">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">key</span><span class="err">:</span> <span class="s2">"received.domestic-corner"</span><span class="p">,</span>
+  <span class="nx">location</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nl">en</span><span class="p">:</span> <span class="s2">"PP PRESS SHOP WAASLAND"</span><span class="p">,</span>
+    <span class="nx">fr</span><span class="err">:</span> <span class="s2">"PP PRESS SHOP WAASLAND"</span><span class="p">,</span>
+    <span class="nx">nl</span><span class="err">:</span> <span class="s2">"PP PRESS SHOP WAASLAND"</span><span class="p">,</span>
   <span class="p">},</span>
-  <span class="s2">"time"</span><span class="err">:</span> <span class="s2">"18:04"</span><span class="p">,</span>
+  <span class="nx">time</span><span class="err">:</span> <span class="s2">"18:04"</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 
-<h2 id="availableforpickup"><code class="highlighter-rouge">#availableForPickup()</code></h2>
+<h2 id="availableforpickup"><code class="highlighter-rouge">#availableForPickup</code></h2>
 
 <h3 id="description-1">Description</h3>
 <p><code class="highlighter-rouge">bpost.availableForPickup()</code> will return if a package is available for pickup by the recipient.

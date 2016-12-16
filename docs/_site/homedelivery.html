@@ -5,76 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="keywords" content=" ">
-<title>Home Delivery | Modern JavaScript API wrapper for bpost track & trace</title>
+<title>Home Delivery | bpost: Modern JavaScript API wrapper for bpost track & trace</title>
 <link rel="stylesheet" href="css/syntax.css">
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
 <link rel="stylesheet" href="css/customstyles.css">
-<link rel="stylesheet" href="css/theme-blue.css">
-<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/screen.css">
+<link rel="shortcut icon" href="images/favicon.png">
 
 </head>
 <body>
   <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container topnavlinks">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Bpost</span></a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <!-- entries without drop-downs appear here -->
-                
-                
-                
+  <div class="container topnavlinks">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="material-icons navbar-brand" href="index.html">store<span class="projectTitle"> Bpost</span></a>
+    </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <!-- entries without drop-downs appear here -->
+          
+            
+              
                 <li><a href="https://github.com/thibmaek/bpost/releases" target="_blank">Changelog</a></li>
-                
-                
-                
+              
+            
+              
                 <li><a href="https://github.com/thibmaek/bpost/issues" target="_blank">Issues</a></li>
-                
-                
-                
+              
+            
+              
                 <li><a href="https://github.com/thibmaek/bpost/projects" target="_blank">Roadmap</a></li>
-                
-                
-                
-                <!-- entries with drop-downs appear here -->
-                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                
-                
-                <!--comment out this block if you want to hide search-->
-                <li>
-                    <!--start search-->
-                    <div id="search-demo-container">
-                        <input type="text" id="search-input" placeholder="search...">
-                        <ul id="results-container"></ul>
-                    </div>
-                    <script src="js/jekyll-search.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                            SimpleJekyllSearch.init({
-                                searchInput: document.getElementById('search-input'),
-                                resultsContainer: document.getElementById('results-container'),
-                                dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Home Delivery">{title}</a></li>',
-                    noResultsText: 'No results found.',
-                            limit: 10,
-                            fuzzy: true,
-                    })
-                    </script>
-                    <!--end search-->
-                </li>
-            </ul>
-        </div>
-        </div>
-        <!-- /.container -->
+              
+            
+          
+          <!-- entries with drop-downs appear here -->
+          <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+          
+          <li>
+            <div id="search-demo-container">
+              <input type="text" id="search-input" placeholder="search...">
+              <ul id="results-container"></ul>
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
 </nav>
 
   <main class="container">
@@ -97,6 +79,10 @@
           
             
               <li><a href="constructing.html">Constructing a session</a></li>
+            
+          
+            
+              <li><a href="multilanguage.html">Multi-language data returns</a></li>
             
           
         </ul>
@@ -142,25 +128,214 @@
   
 
   
-  <a target="_blank" rel="noopener" href="https://github.com/thibmaek/bpost/tree/master/docs/pages/homedelivery.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+  <a target="_blank" rel="noopener" href="https://github.com/thibmaek/bpost/tree/master/docs/pages/homedelivery.md"
+      class="btn btn-default githubEditButton" role="button">
+    <i class="material-icons">mode_edit</i>Edit this page on Github
+  </a>
   
 
-  <h4 id="homedeliveryoptionsjs">homeDeliveryOptions.js</h4>
-<p><strong>bpost#availableFrom()</strong>
-&gt; Object: returns the earliest time and day that a package can be picked up after absence</p>
+  <h2 id="availablefrom"><code class="highlighter-rouge">#availableFrom</code></h2>
 
-<p><strong>bpost#availableTo()</strong>
-&gt; Object: returns the latest time and day that a package can be picked up after absence</p>
+<h3 id="description">Description</h3>
+<p><code class="highlighter-rouge">bpost.availableFrom()</code> will return the earliest timestamp that a package is availble for pickup.
+It requires one passed parameter <code class="highlighter-rouge">id</code> returns the data with the <code class="highlighter-rouge">earliestAvailableTime: {…}</code> value in the API response.</p>
 
-<p><strong>bpost#availableFromTo()</strong>
-&gt; String: returns a formatted string stating the period (in days) a package can be picked up after absence
-(e.g <code class="highlighter-rouge">"Available from 2016-11-23 to 2016-12-07"</code>)</p>
+<div class="alert alert-danger" role="alert">
+  <i class="material-icons">warning</i><b>Warning:</b> This method is only available if the recipient was absent on first delivery attempt.<br /> It will return <code class="highlighter-rouge">undefined</code> if the recipient was present at first delivery attempt.
+</div>
 
-<p><strong>bpost#attemptedDelivery()</strong>
-&gt; Object: returns the time and day that delivery was attempted but receiver was absent</p>
+<h3 id="spec">Spec</h3>
 
-<p><strong>bpost#actualDelivery()</strong>
-&gt; Object: returns the time and day when a package was picked up from the postal point, receiving the absently delivered package</p>
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Return type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;Object&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="usage">Usage</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">availableFrom</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'bpost'</span><span class="p">;</span>
+
+<span class="nx">availableFrom</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="output">Output</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nl">time</span><span class="p">:</span> <span class="s2">"11:00"</span><span class="p">,</span>
+  <span class="nx">day</span><span class="err">:</span> <span class="s2">"2016-11-23"</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h2 id="availableto"><code class="highlighter-rouge">#availableTo</code></h2>
+
+<h3 id="description-1">Description</h3>
+<p><code class="highlighter-rouge">bpost.availableTo()</code> will return the latest timestamp that a package can be picked up.
+It requires one passed parameter <code class="highlighter-rouge">id</code> returns the data with the <code class="highlighter-rouge">latestAvailableTime: {…}</code> value in the API response.</p>
+
+<div class="alert alert-danger" role="alert">
+  <i class="material-icons">warning</i><b>Warning:</b> This method is only available if the recipient was absent on first delivery attempt.<br /> It will return <code class="highlighter-rouge">undefined</code> if the recipient was present at first delivery attempt.
+</div>
+
+<h3 id="spec-1">Spec</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Return type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;Object&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="usage-1">Usage</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">availableTo</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'bpost'</span><span class="p">;</span>
+
+<span class="nx">availableTo</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="output-1">Output</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nl">time</span><span class="p">:</span> <span class="s2">"22:00"</span><span class="p">,</span>
+  <span class="nx">day</span><span class="err">:</span> <span class="s2">"2016-12-07"</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h2 id="availablefromto"><code class="highlighter-rouge">#availableFromTo</code></h2>
+
+<h3 id="description-2">Description</h3>
+<p><code class="highlighter-rouge">bpost.availableFromTo()</code> will return a formatted string containing the period (in days) that a package is available for pickup after absence.
+It requires one passed parameter <code class="highlighter-rouge">id</code> returns a combined data for the values of <code class="highlighter-rouge">earliestAvailableTime.day</code> and <code class="highlighter-rouge">latestAvailableTime.day</code> in the API response.</p>
+
+<div class="alert alert-danger" role="alert">
+  <i class="material-icons">warning</i><b>Warning:</b> This method is only available if the recipient was absent on first delivery attempt.<br /> It will return <code class="highlighter-rouge">undefined</code> if the recipient was present at first delivery attempt.
+</div>
+
+<h3 id="spec-2">Spec</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Return type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;String&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="usage-2">Usage</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">availableFromTo</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'bpost'</span><span class="p">;</span>
+
+<span class="nx">availableFromTo</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="output-2">Output</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="s1">'Available from 2016-11-23 to 2016-12-07'</span>
+</code></pre>
+</div>
+
+<h2 id="attempteddelivery"><code class="highlighter-rouge">#attemptedDelivery</code></h2>
+
+<h3 id="description-3">Description</h3>
+<p><code class="highlighter-rouge">bpost.attemptedDelivery()</code> will return the timestamp for the first delivery attempt in which recipient was absent.
+It requires one passed parameter <code class="highlighter-rouge">id</code> returns the data with the <code class="highlighter-rouge">attemptedDeliveryTime: {…}</code> value in the API response.</p>
+
+<h3 id="spec-3">Spec</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Return type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;Object&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="usage-3">Usage</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">attemptedDelivery</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'bpost'</span><span class="p">;</span>
+
+<span class="nx">attemptedDelivery</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="output-3">Output</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nl">time</span><span class="p">:</span> <span class="s2">"12:28"</span><span class="p">,</span>
+  <span class="nx">day</span><span class="err">:</span> <span class="s2">"2016-11-22"</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h2 id="actualdelivery"><code class="highlighter-rouge">#actualDelivery</code></h2>
+
+<h3 id="description-4">Description</h3>
+<p><code class="highlighter-rouge">bpost.actualDelivery()</code> will return the timestamp for when the package was picked up at the postal point after absence.
+It requires one passed parameter <code class="highlighter-rouge">id</code> returns the data with the <code class="highlighter-rouge">actualDeliveryTime: {…}</code> value in the API response.</p>
+
+<div class="alert alert-danger" role="alert">
+  <i class="material-icons">warning</i><b>Warning:</b> This method is only available if a package is picked up after first delivery attempt.<br /> It will return <code class="highlighter-rouge">undefined</code> if the recipient was present at first delivery attempt or if the package is yet to be picked up at the postal point.
+</div>
+
+<h3 id="spec-4">Spec</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Return type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;Object&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="usage-4">Usage</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">actualDelivery</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'bpost'</span><span class="p">;</span>
+
+<span class="nx">actualDelivery</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="output-4">Output</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nl">time</span><span class="p">:</span> <span class="s2">"13:37"</span><span class="p">,</span>
+  <span class="nx">day</span><span class="err">:</span> <span class="s2">"2016-11-23"</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 </div>
 

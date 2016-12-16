@@ -3,7 +3,7 @@ title: Getting package events
 permalink: events
 sidebar: main
 ---
-## `#droppedOffBySender()`
+## `#droppedOffBySender`
 
 ### Description
 `bpost.droppedOffBySender()` will return information when the package is dropped off by the sender at sender's source postal point.
@@ -25,19 +25,19 @@ droppedOffBySender(`323267009691651472`).then(res => res);
 ### Output
 ```js
 {
-  "date": "2016-11-09",
-  "irregularity": false,
-  "key": "received.domestic-corner",
-  "location": {
-    "en": "PP PRESS SHOP WAASLAND",
-    "fr": "PP PRESS SHOP WAASLAND",
-    "nl": "PP PRESS SHOP WAASLAND",
+  date: "2016-11-09",
+  irregularity: false,
+  key: "received.domestic-corner",
+  location: {
+    en: "PP PRESS SHOP WAASLAND",
+    fr: "PP PRESS SHOP WAASLAND",
+    nl: "PP PRESS SHOP WAASLAND",
   },
-  "time": "18:04",
+  time: "18:04",
 }
 ```
 
-## `#availableForPickup()`
+## `#availableForPickup`
 
 ### Description
 `bpost.availableForPickup()` will return if a package is available for pickup by the recipient.

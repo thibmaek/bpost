@@ -5,76 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="keywords" content=" ">
-<title>Postal Point | Modern JavaScript API wrapper for bpost track & trace</title>
+<title>Postal Point | bpost: Modern JavaScript API wrapper for bpost track & trace</title>
 <link rel="stylesheet" href="css/syntax.css">
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="css/lavish-bootstrap.css">
 <link rel="stylesheet" href="css/customstyles.css">
-<link rel="stylesheet" href="css/theme-blue.css">
-<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/screen.css">
+<link rel="shortcut icon" href="images/favicon.png">
 
 </head>
 <body>
   <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container topnavlinks">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Bpost</span></a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <!-- entries without drop-downs appear here -->
-                
-                
-                
+  <div class="container topnavlinks">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="material-icons navbar-brand" href="index.html">store<span class="projectTitle"> Bpost</span></a>
+    </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <!-- entries without drop-downs appear here -->
+          
+            
+              
                 <li><a href="https://github.com/thibmaek/bpost/releases" target="_blank">Changelog</a></li>
-                
-                
-                
+              
+            
+              
                 <li><a href="https://github.com/thibmaek/bpost/issues" target="_blank">Issues</a></li>
-                
-                
-                
+              
+            
+              
                 <li><a href="https://github.com/thibmaek/bpost/projects" target="_blank">Roadmap</a></li>
-                
-                
-                
-                <!-- entries with drop-downs appear here -->
-                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                
-                
-                <!--comment out this block if you want to hide search-->
-                <li>
-                    <!--start search-->
-                    <div id="search-demo-container">
-                        <input type="text" id="search-input" placeholder="search...">
-                        <ul id="results-container"></ul>
-                    </div>
-                    <script src="js/jekyll-search.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                            SimpleJekyllSearch.init({
-                                searchInput: document.getElementById('search-input'),
-                                resultsContainer: document.getElementById('results-container'),
-                                dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Postal Point">{title}</a></li>',
-                    noResultsText: 'No results found.',
-                            limit: 10,
-                            fuzzy: true,
-                    })
-                    </script>
-                    <!--end search-->
-                </li>
-            </ul>
-        </div>
-        </div>
-        <!-- /.container -->
+              
+            
+          
+          <!-- entries with drop-downs appear here -->
+          <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+          
+          <li>
+            <div id="search-demo-container">
+              <input type="text" id="search-input" placeholder="search...">
+              <ul id="results-container"></ul>
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
 </nav>
 
   <main class="container">
@@ -97,6 +79,10 @@
           
             
               <li><a href="constructing.html">Constructing a session</a></li>
+            
+          
+            
+              <li><a href="multilanguage.html">Multi-language data returns</a></li>
             
           
         </ul>
@@ -142,27 +128,213 @@
   
 
   
-  <a target="_blank" rel="noopener" href="https://github.com/thibmaek/bpost/tree/master/docs/pages/postalpoint.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+  <a target="_blank" rel="noopener" href="https://github.com/thibmaek/bpost/tree/master/docs/pages/postalpoint.md"
+      class="btn btn-default githubEditButton" role="button">
+    <i class="material-icons">mode_edit</i>Edit this page on Github
+  </a>
   
 
-  <h4 id="postalpointoptionsjs">postalPointOptions.js</h4>
-<p><strong>bpost#sourcePostalPoint()</strong>
-&gt; String: returns the English name for the postal point where your package is delivered by the sender</p>
+  <h2 id="sourcepostalpoint"><code class="highlighter-rouge">#sourcePostalPoint</code></h2>
 
-<p><strong>bpost#destinationPostalPoint()</strong>
-&gt; String: returns the English name for the postal point where your package is delivered for the recipient</p>
+<h3 id="description">Description</h3>
+<p><code class="highlighter-rouge">bpost.sourcePostalPoint()</code> will return the name of the postal point where the sender drops off the package.
+It requires one passed parameter <code class="highlighter-rouge">id</code> returns the data for the <code class="highlighter-rouge">location.en</code> key proceeding the <code class="highlighter-rouge">"key":"received.domestic-corner"</code> pair.</p>
 
-<p><strong>bpost#destinationAsAddress()</strong>
-&gt; String: returns a formatted string with the complete destination address
-(eg. <code class="highlighter-rouge">"Pathoekeweg 73, 8000 Brugge"</code>)</p>
+<p>It supports <a href="/multilanguage">multi-language returns</a>, either <a href="/constructing">constructed with a session</a> or passed directly as a parameter.</p>
 
-<p><strong>bpost#openingHours(day: String)</strong>
-&gt; Object: returns opening and closing times on the given day
-(eg. <code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">open:</span><span class="w"> </span><span class="nt">"07:00"</span><span class="err">,</span><span class="w"> </span><span class="err">close</span><span class="p">:</span><span class="w"> </span><span class="s2">"19:00"</span><span class="w"> </span><span class="p">}</span></code>)</p>
+<h3 id="spec">Spec</h3>
 
-<p><strong>bpost#destinationCoordinate()</strong>
-&gt; Object: returns a 2D lat long coordinate of the destination
-(eg. <code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.21387</span><span class="p">,</span><span class="w"> </span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">51.23154</span><span class="p">,</span><span class="w"> </span><span class="err">}</span></code>)</p>
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Return type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;String&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String, ?en: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;String&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="usage">Usage</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">sourcePostalPoint</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'bpost'</span><span class="p">;</span>
+
+<span class="nx">sourcePostalPoint</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+<span class="nx">sourcePostalPoint</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">,</span> <span class="s1">'nl'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="output">Output</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="s1">'PP PRESS SHOP WAASLAND'</span>
+</code></pre>
+</div>
+
+<h2 id="destinationpostalpoint"><code class="highlighter-rouge">#destinationPostalPoint</code></h2>
+
+<h3 id="description-1">Description</h3>
+<p><code class="highlighter-rouge">bpost.destinationPostalPoint()</code> will return the name of the postal point chosen as destination.
+It requires one passed parameter <code class="highlighter-rouge">id</code> returns the data with the <code class="highlighter-rouge">events.deliveryPoint.name.en: …</code> value in the API response.</p>
+
+<p>It supports <a href="/multilanguage">multi-language returns</a>, either <a href="/constructing">constructed with a session</a> or passed directly as a parameter.</p>
+
+<h3 id="spec-1">Spec</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Return type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;String&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String, ?lang: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;String&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="usage-1">Usage</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">destinationPostalPoint</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'bpost'</span><span class="p">;</span>
+
+<span class="nx">destinationPostalPoint</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+<span class="nx">destinationPostalPoint</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">,</span> <span class="err">`</span><span class="nx">nl</span><span class="err">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="output-1">Output</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="s1">'POSTPUNT OCTA+ BRUGGE'</span>
+</code></pre>
+</div>
+
+<h2 id="destinationasaddress"><code class="highlighter-rouge">#destinationAsAddress</code></h2>
+
+<h3 id="description-2">Description</h3>
+<p><code class="highlighter-rouge">bpost.destinationAsAddress()</code> will return a formatted string containing the address of the destination postal point.
+It requires one passed parameter <code class="highlighter-rouge">id</code> returns the data with the <code class="highlighter-rouge">deliveryPoint.en: …</code> value in the API response.</p>
+
+<p>It supports <a href="/multilanguage">multi-language returns</a>, either <a href="/constructing">constructed with a session</a> or passed directly as a parameter.</p>
+
+<h3 id="spec-2">Spec</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Return type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;String&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String, ?lang: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;String&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="usage-2">Usage</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">destinationAsAddress</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'bpost'</span><span class="p">;</span>
+
+<span class="nx">destinationAsAddress</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+<span class="nx">destinationAsAddress</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">,</span> <span class="nx">nl</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="output-2">Output</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="s1">'Pathoekeweg 74, 8000 Brugge'</span>
+</code></pre>
+</div>
+
+<h2 id="openinghours"><code class="highlighter-rouge">#openingHours</code></h2>
+
+<h3 id="description-3">Description</h3>
+<p><code class="highlighter-rouge">bpost.openingHours()</code> will return the opening and closing hours the destination postal point on a given day.
+It requires two passed parameters <code class="highlighter-rouge">id</code> and <code class="highlighter-rouge">day</code> and returns the data with the <code class="highlighter-rouge">deliveryPoint.openingSchedules: {…}</code> value in the API response.</p>
+
+<h3 id="spec-3">Spec</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Return type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String, day: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;Object&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="usage-3">Usage</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">openingHours</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'bpost'</span><span class="p">;</span>
+
+<span class="nx">openingHours</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">,</span> <span class="s1">'monday'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="output-3">Output</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nl">open</span><span class="p">:</span> <span class="s2">"07:00"</span><span class="p">,</span>
+  <span class="nx">close</span><span class="err">:</span> <span class="s2">"19:00"</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h2 id="destinationcoordinate"><code class="highlighter-rouge">#destinationCoordinate</code></h2>
+
+<h3 id="description-4">Description</h3>
+<p><code class="highlighter-rouge">bpost.destinationCoordinate()</code> will return a 2D lat long coordinate for the destination postal point.
+It requires one passed parameter <code class="highlighter-rouge">id</code> returns the data with the <code class="highlighter-rouge">deliveryPoint.latitude: …</code> and <code class="highlighter-rouge">deliveryPoint.longitude: …</code> values in the API response, formatted as an object.</p>
+
+<h3 id="spec-4">Spec</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameters</th>
+      <th>Return type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">(id: String)</code></td>
+      <td><code class="highlighter-rouge">Promise&lt;Object&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="usage-4">Usage</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">destinationCoordinate</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'bpost'</span><span class="p">;</span>
+
+<span class="nx">destinationCoordinate</span><span class="p">(</span><span class="err">`</span><span class="mi">323267009691651472</span><span class="err">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="o">=&gt;</span> <span class="nx">res</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="output-4">Output</h3>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
+  <span class="nl">longitude</span><span class="p">:</span> <span class="mf">3.21387</span><span class="p">,</span>
+  <span class="nx">latitude</span><span class="err">:</span> <span class="mf">51.23154</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 </div>
 
