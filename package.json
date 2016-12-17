@@ -35,7 +35,7 @@
       "ID_FALSE": "3D3267OO9691651472"
     },
     "notify": true,
-    "setupTestFrameworkScriptFile": "__tests__/jestSetup.js",
+    "setupTestFrameworkScriptFile": "./__tests__/jestSetup.js",
     "testEnvironment": "node",
     "testPathIgnorePatterns": [
       "jestSetup.js"
@@ -71,7 +71,7 @@
     "eslint-config-devine": "^1.5.0",
     "eslint-plugin-babel": "^4.0.0",
     "ghooks": "^1.3.2",
-    "jest": "^17.0.3",
+    "jest": "^18.0.0",
     "np": "^2.11.0",
     "npm-watch": "^0.1.6",
     "opt-cli": "^1.5.1",
