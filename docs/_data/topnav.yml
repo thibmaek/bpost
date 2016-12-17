@@ -1,20 +1,13 @@
 ## Topnav single links
 ## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
 topnav:
-- title: ""
+- title: Github links
   items:
+    - title: help-wanted
+      external_url: https://github.com/thibmaek/bpost/issues?q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted
     - title: Changelog
       external_url: https://github.com/thibmaek/bpost/releases
     - title: Issues
       external_url: https://github.com/thibmaek/bpost/issues
     - title: Roadmap
       external_url: https://github.com/thibmaek/bpost/projects
-
-#Topnav dropdowns
-# topnav_dropdowns:
-#   - title: ""
-#     folders:
-#       - title: ""
-#         folderitems:
-#           - title: ""
-#             external_url: ""
