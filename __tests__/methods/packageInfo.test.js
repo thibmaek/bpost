@@ -31,7 +31,7 @@ describe(`Method: hasRetourOptions`, () => {
 describe(`Method: receiver`, () => {
   it(`should return the object for with receiver data`, async () => {
     const request = await bpost.receiver(global.BPOST_ID_POSTAL);
-    expect(request).toMatchSnapshot();
+    expect(request).toMatchSnapshot(`receiver`);
   });
 
   it(`should return a formatted string is last argument is true`, async () => {

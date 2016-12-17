@@ -1,4 +1,4 @@
-exports[`Method: droppedOffBySender should return the object when package is at origin 1`] = `
+exports[`droppedOffBySender 1`] = `
 Object {
   "date": "2016-11-09",
   "irregularity": false,

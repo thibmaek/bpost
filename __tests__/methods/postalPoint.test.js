@@ -32,13 +32,13 @@ describe(`Method: openingHours`, () => {
 
   it(`should return the opening hours`, async () => {
     const request = await bpost.openingHours(global.BPOST_ID_POSTAL, `monday`);
-    expect(request).toMatchSnapshot();
+    expect(request).toMatchSnapshot(`openingHours`);
   });
 });
 
 describe(`Method: destinationCoordinate`, () => {
   it(`should return destination as 2D coordinate`, async () => {
     const request = await bpost.destinationCoordinate(global.BPOST_ID_POSTAL);
-    expect(request).toMatchSnapshot();
+    expect(request).toMatchSnapshot(`destinationCoordinate`);
   });
 });

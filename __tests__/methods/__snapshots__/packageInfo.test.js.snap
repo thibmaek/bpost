@@ -1,4 +1,4 @@
-exports[`Method: receiver should return the object for with receiver data 1`] = `
+exports[`receiver 1`] = `
 Object {
   "countryCode": "BE",
   "municipality": "BRUGGE",

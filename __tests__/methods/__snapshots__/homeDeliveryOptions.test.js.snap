@@ -1,11 +1,11 @@
-exports[`Method: actualDelivery should return the object for picked up delivery 1`] = `
+exports[`actualDelivery 1`] = `
 Object {
   "day": "2016-11-23",
   "time": "13:37",
 }
 `;
 
-exports[`Method: attemptedDelivery should return the object for attempted door delivery 1`] = `
+exports[`attemptedDelivery 1`] = `
 Object {
   "day": "2016-11-22",
   "time": "12:28",

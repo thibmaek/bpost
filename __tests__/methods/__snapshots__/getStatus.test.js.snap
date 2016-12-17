@@ -1,4 +1,4 @@
-exports[`Method: getStatus should return the object for currently active step 1`] = `
+exports[`getStatus 1`] = `
 Object {
   "knownProcessStep": "PICKED_UP_IN_POST_POINT_INTERNATIONAL",
   "label": Object {
