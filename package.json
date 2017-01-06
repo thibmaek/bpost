@@ -73,7 +73,7 @@
     "npm-watch": "^0.1.7",
     "opt-cli": "^1.5.1",
     "rimraf": "^2.5.4",
-    "rollup": "^0.41.0",
+    "rollup": "^0.41.1",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-bundle-size": "^1.0.1",
     "rollup-plugin-commonjs": "^7.0.0",
