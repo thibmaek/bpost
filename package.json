@@ -65,7 +65,7 @@
     "cross-env": "^3.1.4",
     "eslint": "^3.13.1",
     "eslint-config-devine": "^1.6.1",
-    "eslint-plugin-babel": "^4.0.0",
+    "eslint-plugin-babel": "^4.0.1",
     "eslint-plugin-compat": "^1.0.0",
     "husky": "^0.12.0",
     "jest": "^18.1.0",
