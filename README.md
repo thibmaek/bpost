@@ -1,6 +1,6 @@
 # bpost
 
-JavaScript API wrapper for bpost track &amp; trace
+JavaScript API wrapper for [bpost track &amp; trace](https://parcel.bpost.be/)
 
 [![NPM](https://img.shields.io/npm/v/bpost.svg?style=flat-square)](https://www.npmjs.com/package/bpost)
 [![David](https://img.shields.io/david/thibmaek/bpost.svg?style=flat-square)](https://david-dm.org/thibmaek/bpost)
