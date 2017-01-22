@@ -17,7 +17,7 @@ describe(`Method: destinationPostalPoint`, () => {
 describe(`Method: destinationAsAddress`, () => {
   it(`should return the destination postal point formatted as an address`, async () => {
     const request = await bpost.destinationAsAddress(global.BPOST_ID_POSTAL);
-    expect(request).toEqual(`Pathoekeweg 74, 8000 Brugge`);
+    expect(request).toEqual(`Pathoekeweg 74-78, 8000 Brugge`);
   });
 });
 
