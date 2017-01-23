@@ -67,7 +67,7 @@
     "eslint-config-devine": "^1.6.1",
     "eslint-plugin-babel": "^4.0.1",
     "eslint-plugin-compat": "^1.0.1",
-    "husky": "^0.13.0",
+    "husky": "^0.13.1",
     "jest": "^18.1.0",
     "np": "^2.12.0",
     "npm-watch": "^0.1.7",
