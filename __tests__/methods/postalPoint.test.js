@@ -10,7 +10,7 @@ describe(`Method: sourcePostalPoint`, () => {
 describe(`Method: destinationPostalPoint`, () => {
   it(`should return the destination postal point name`, async () => {
     const request = await bpost.destinationPostalPoint(global.BPOST_ID_POSTAL);
-    expect(request).toEqual(`POSTPUNT OCTA+ BRUGGE`);
+    expect(request).toEqual(`OCTA+ BRUGGE`);
   });
 });
 
