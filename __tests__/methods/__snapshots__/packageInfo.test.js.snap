@@ -1,8 +1,0 @@
-exports[`receiver 1`] = `
-Object {
-  "countryCode": "BE",
-  "municipality": "BRUGGE",
-  "name": "THIBAULT MAEKELBERGH",
-  "postcode": "8000",
-}
-`;
