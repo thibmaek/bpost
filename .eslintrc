@@ -9,5 +9,6 @@
     "max-len": ["warn", 100],
     "object-shorthand": ["warn", "always"],
     "babel/object-curly-spacing": ["error", "always"],
+    "sort-keys": ["error"]
   },
 }
