@@ -11,27 +11,23 @@ export default (ID, lang = `en`) => {
   if (typeof ID !== `string`) throw new TypeError(`ID needs to be of type: string`);
 
   return {
-    getStatus: () => getStatus(ID),
-
-    droppedOffBySender: () => droppedOffBySender(ID),
-    availableForPickup: () => availableForPickup(ID),
-
-    getPackageWeight: () => getPackageWeight(ID),
-    deliveryMethod: () => deliveryMethod(ID),
-    identifier: () => identifier(ID),
-    hasRetourOptions: () => hasRetourOptions(ID),
-    receiver: () => receiver(ID),
-
-    sourcePostalPoint: () => sourcePostalPoint(ID, lang),
-    destinationPostalPoint: () => destinationPostalPoint(ID, lang),
-    destinationAsAddress: () => destinationAsAddress(ID, lang),
-    openingHours: day => openingHours(ID, day),
-    destinationCoordinate: () => destinationCoordinate(ID),
-
-    availableFrom: () => availableFrom(ID),
-    availableTo: () => availableTo(ID),
-    availableFromTo: () => availableFromTo(ID),
-    attemptedDelivery: () => attemptedDelivery(ID),
     actualDelivery: () => actualDelivery(ID),
+    attemptedDelivery: () => attemptedDelivery(ID),
+    availableForPickup: () => availableForPickup(ID),
+    availableFrom: () => availableFrom(ID),
+    availableFromTo: () => availableFromTo(ID),
+    availableTo: () => availableTo(ID),
+    deliveryMethod: () => deliveryMethod(ID),
+    destinationAsAddress: () => destinationAsAddress(ID, lang),
+    destinationCoordinate: () => destinationCoordinate(ID),
+    destinationPostalPoint: () => destinationPostalPoint(ID, lang),
+    droppedOffBySender: () => droppedOffBySender(ID),
+    getPackageWeight: () => getPackageWeight(ID),
+    getStatus: () => getStatus(ID),
+    hasRetourOptions: () => hasRetourOptions(ID),
+    identifier: () => identifier(ID),
+    openingHours: day => openingHours(ID, day),
+    receiver: () => receiver(ID),
+    sourcePostalPoint: () => sourcePostalPoint(ID, lang),
   };
 };
