@@ -57,11 +57,11 @@
   "license": "MIT",
   "repository": "thibmaek/bpost",
   "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-core": "^6.24.0",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-async-to-generator": "^6.22.0",
-    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2015": "^6.24.1",
     "cross-env": "^4.0.0",
     "eslint": "^3.19.0",
     "eslint-config-devine": "^1.7.1",
@@ -82,7 +82,7 @@
     "rollup-plugin-uglify": "^1.0.1"
   },
   "dependencies": {
-    "axios": "^0.16.0",
+    "axios": "^0.16.1",
     "lodash.find": "^4.6.0"
   },
   "engines": {
