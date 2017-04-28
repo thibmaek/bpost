@@ -3002,9 +3002,9 @@ normalize-path@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-2.0.1.tgz#47886ac1662760d4261b7d979d241709d3ce3f7a"
 
-np@^2.13.2:
-  version "2.13.2"
-  resolved "https://registry.yarnpkg.com/np/-/np-2.13.2.tgz#73464a0b858a5d31645dcf0e9a2d9491df51a842"
+np@^2.13.3:
+  version "2.13.3"
+  resolved "https://registry.yarnpkg.com/np/-/np-2.13.3.tgz#56f0350cac6fbcfcbf8cc879ba9428a7c8d69346"
   dependencies:
     any-observable "^0.2.0"
     chalk "^1.1.3"
@@ -3017,7 +3017,7 @@ np@^2.13.2:
     meow "^3.7.0"
     read-pkg-up "^2.0.0"
     rxjs "^5.0.0-beta.9"
-    semver "^5.1.0"
+    semver "^5.2.0"
     split "^1.0.0"
     stream-to-observable "^0.2.0"
     update-notifier "^2.1.0"
@@ -3662,9 +3662,9 @@ rollup-plugin-resolve-root@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-resolve-root/-/rollup-plugin-resolve-root-0.1.0.tgz#741850bffd8808a7e9d8a58440692fc1c3108fe4"
 
-rollup-plugin-uglify@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-uglify/-/rollup-plugin-uglify-1.0.1.tgz#11d0b0c8bcd2d07e6908f74fd16b0152390b922a"
+rollup-plugin-uglify@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-uglify/-/rollup-plugin-uglify-1.0.2.tgz#d4aa6f5df13522eae1ba17780c7c4c7096038359"
   dependencies:
     uglify-js "^2.6.1"
 
@@ -3740,7 +3740,7 @@ semver-diff@^2.0.0:
   dependencies:
     semver "^5.0.3"
 
-"semver@2 || 3 || 4 || 5", semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@~5.3.0:
+"semver@2 || 3 || 4 || 5", semver@^5.0.3, semver@^5.1.0, semver@^5.2.0, semver@^5.3.0, semver@~5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
