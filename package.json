@@ -52,7 +52,17 @@
     "build:cjs": "rimraf cjs && cross-env BABEL_ENV=cjs babel src --out-dir cjs",
     "build:umd": "rimraf dist && cross-env BABEL_ENV=es rollup -c & cross-env BABEL_ENV=es NODE_ENV=production rollup -c"
   },
-  "keywords": [],
+  "keywords": [
+    "bpost",
+    "post",
+    "api",
+    "belgium",
+    "parcel",
+    "package",
+    "tracking",
+    "track",
+    "trace"
+  ],
   "author": "Thibault Maekelbergh (thibault.maekelbergh@icloud.com)",
   "license": "MIT",
   "repository": "thibmaek/bpost",
